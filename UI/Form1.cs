@@ -21,5 +21,10 @@ namespace UI
         {
             MessageBox.Show("Hola, como estas");
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

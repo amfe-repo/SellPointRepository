@@ -35,7 +35,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(279, 95);
+            this.checkBox1.Location = new System.Drawing.Point(283, 138);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(80, 17);
             this.checkBox1.TabIndex = 0;
@@ -45,7 +45,7 @@
             // checkedListBox1
             // 
             this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(479, 199);
+            this.checkedListBox1.Location = new System.Drawing.Point(269, 220);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(120, 124);
             this.checkedListBox1.TabIndex = 1;
