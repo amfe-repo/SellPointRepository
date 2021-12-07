@@ -34,9 +34,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(250, 210);
+            this.button1.Location = new System.Drawing.Point(125, 177);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(266, 87);
+            this.button1.Size = new System.Drawing.Size(486, 205);
             this.button1.TabIndex = 0;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -45,11 +45,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(323, 120);
+            this.label1.Location = new System.Drawing.Point(303, 128);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
+            this.label1.Size = new System.Drawing.Size(108, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "User";
+            this.label1.Text = "User Integeradsad as";
             // 
             // Form1
             // 
