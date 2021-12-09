@@ -32,6 +32,10 @@
             this.LBUser = new System.Windows.Forms.Label();
             this.LBPass = new System.Windows.Forms.Label();
             this.TXUser = new System.Windows.Forms.TextBox();
+            this.TXPass = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // LBUser
@@ -40,7 +44,7 @@
             this.LBUser.BackColor = System.Drawing.Color.Transparent;
             this.LBUser.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBUser.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LBUser.Location = new System.Drawing.Point(219, 204);
+            this.LBUser.Location = new System.Drawing.Point(239, 204);
             this.LBUser.Name = "LBUser";
             this.LBUser.Size = new System.Drawing.Size(90, 24);
             this.LBUser.TabIndex = 0;
@@ -52,7 +56,7 @@
             this.LBPass.BackColor = System.Drawing.Color.Transparent;
             this.LBPass.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBPass.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LBPass.Location = new System.Drawing.Point(204, 285);
+            this.LBPass.Location = new System.Drawing.Point(219, 277);
             this.LBPass.Name = "LBPass";
             this.LBPass.Size = new System.Drawing.Size(127, 24);
             this.LBPass.TabIndex = 1;
@@ -60,19 +64,56 @@
             // 
             // TXUser
             // 
-            this.TXUser.Location = new System.Drawing.Point(157, 231);
+            this.TXUser.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXUser.Location = new System.Drawing.Point(168, 231);
             this.TXUser.Multiline = true;
             this.TXUser.Name = "TXUser";
             this.TXUser.Size = new System.Drawing.Size(219, 28);
             this.TXUser.TabIndex = 2;
+            // 
+            // TXPass
+            // 
+            this.TXPass.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXPass.Location = new System.Drawing.Point(170, 304);
+            this.TXPass.Multiline = true;
+            this.TXPass.Name = "TXPass";
+            this.TXPass.Size = new System.Drawing.Size(219, 28);
+            this.TXPass.TabIndex = 3;
+            this.TXPass.UseSystemPasswordChar = true;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(204, 365);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(156, 58);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Iniciar Sesión";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(184, 44);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(189, 117);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(566, 542);
+            this.ClientSize = new System.Drawing.Size(566, 453);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.TXPass);
             this.Controls.Add(this.TXUser);
             this.Controls.Add(this.LBPass);
             this.Controls.Add(this.LBUser);
@@ -81,6 +122,7 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -91,5 +133,8 @@
         private System.Windows.Forms.Label LBUser;
         private System.Windows.Forms.Label LBPass;
         private System.Windows.Forms.TextBox TXUser;
+        private System.Windows.Forms.TextBox TXPass;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
