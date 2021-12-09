@@ -44,7 +44,7 @@
             this.LBUser.BackColor = System.Drawing.Color.Transparent;
             this.LBUser.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBUser.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LBUser.Location = new System.Drawing.Point(239, 188);
+            this.LBUser.Location = new System.Drawing.Point(242, 188);
             this.LBUser.Name = "LBUser";
             this.LBUser.Size = new System.Drawing.Size(72, 19);
             this.LBUser.TabIndex = 0;
@@ -56,7 +56,7 @@
             this.LBPass.BackColor = System.Drawing.Color.Transparent;
             this.LBPass.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBPass.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LBPass.Location = new System.Drawing.Point(222, 252);
+            this.LBPass.Location = new System.Drawing.Point(226, 252);
             this.LBPass.Name = "LBPass";
             this.LBPass.Size = new System.Drawing.Size(105, 19);
             this.LBPass.TabIndex = 1;
@@ -65,7 +65,7 @@
             // TXUser
             // 
             this.TXUser.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXUser.Location = new System.Drawing.Point(171, 215);
+            this.TXUser.Location = new System.Drawing.Point(169, 215);
             this.TXUser.Multiline = true;
             this.TXUser.Name = "TXUser";
             this.TXUser.Size = new System.Drawing.Size(219, 28);
@@ -74,7 +74,7 @@
             // TXPass
             // 
             this.TXPass.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXPass.Location = new System.Drawing.Point(171, 279);
+            this.TXPass.Location = new System.Drawing.Point(169, 279);
             this.TXPass.Multiline = true;
             this.TXPass.Name = "TXPass";
             this.TXPass.Size = new System.Drawing.Size(219, 28);
@@ -87,7 +87,7 @@
             this.BTLog.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BTLog.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTLog.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BTLog.Location = new System.Drawing.Point(199, 333);
+            this.BTLog.Location = new System.Drawing.Point(200, 333);
             this.BTLog.Name = "BTLog";
             this.BTLog.Size = new System.Drawing.Size(156, 58);
             this.BTLog.TabIndex = 4;
