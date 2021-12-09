@@ -82,5 +82,9 @@
   <ItemGroup>
     <Folder Include="Ventanas\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="WinForms\Login_src\FondoMorado.jpg" />
+    <Content Include="WinForms\Login_src\IconoLogin.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
