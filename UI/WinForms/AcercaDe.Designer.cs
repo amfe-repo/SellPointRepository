@@ -128,6 +128,7 @@ namespace UI.WinForms
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(433, 450);
             this.Controls.Add(this.PN_Datos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AcercaDe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.PN_Datos.ResumeLayout(false);
