@@ -36,13 +36,12 @@ namespace UI.WinForms
             this.BTNSearch = new System.Windows.Forms.Button();
             this.BTNDel = new System.Windows.Forms.Button();
             this.LBDesc = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TXDescp = new System.Windows.Forms.TextBox();
+            this.TXComen = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.TXEsta = new System.Windows.Forms.TextBox();
+            this.ChF = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -128,19 +127,19 @@ namespace UI.WinForms
             this.LBDesc.TabIndex = 1;
             this.LBDesc.Text = "Descripcion";
             // 
-            // textBox1
+            // TXDescp
             // 
-            this.textBox1.Location = new System.Drawing.Point(45, 68);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(187, 20);
-            this.textBox1.TabIndex = 2;
+            this.TXDescp.Location = new System.Drawing.Point(45, 68);
+            this.TXDescp.Name = "TXDescp";
+            this.TXDescp.Size = new System.Drawing.Size(187, 20);
+            this.TXDescp.TabIndex = 2;
             // 
-            // textBox2
+            // TXComen
             // 
-            this.textBox2.Location = new System.Drawing.Point(296, 68);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(187, 20);
-            this.textBox2.TabIndex = 4;
+            this.TXComen.Location = new System.Drawing.Point(296, 68);
+            this.TXComen.Name = "TXComen";
+            this.TXComen.Size = new System.Drawing.Size(187, 20);
+            this.TXComen.TabIndex = 4;
             // 
             // label1
             // 
@@ -166,38 +165,25 @@ namespace UI.WinForms
             this.label2.TabIndex = 6;
             this.label2.Text = "Estatus";
             // 
-            // textBox3
+            // TXEsta
             // 
-            this.textBox3.Location = new System.Drawing.Point(45, 128);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(187, 20);
-            this.textBox3.TabIndex = 7;
+            this.TXEsta.Location = new System.Drawing.Point(45, 128);
+            this.TXEsta.Name = "TXEsta";
+            this.TXEsta.Size = new System.Drawing.Size(187, 20);
+            this.TXEsta.TabIndex = 7;
             // 
-            // checkBox1
+            // ChF
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.checkBox1.Location = new System.Drawing.Point(3, 3);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(103, 20);
-            this.checkBox1.TabIndex = 8;
-            this.checkBox1.Text = "Verdadero";
-            this.checkBox1.UseVisualStyleBackColor = false;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox2.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.checkBox2.Location = new System.Drawing.Point(116, 3);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(66, 20);
-            this.checkBox2.TabIndex = 9;
-            this.checkBox2.Text = "Falso";
-            this.checkBox2.UseVisualStyleBackColor = false;
+            this.ChF.AutoSize = true;
+            this.ChF.BackColor = System.Drawing.Color.Transparent;
+            this.ChF.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChF.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ChF.Location = new System.Drawing.Point(61, 3);
+            this.ChF.Name = "ChF";
+            this.ChF.Size = new System.Drawing.Size(66, 20);
+            this.ChF.TabIndex = 9;
+            this.ChF.Text = "Falso";
+            this.ChF.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
@@ -215,8 +201,7 @@ namespace UI.WinForms
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.checkBox1);
-            this.panel2.Controls.Add(this.checkBox2);
+            this.panel2.Controls.Add(this.ChF);
             this.panel2.Location = new System.Drawing.Point(295, 130);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(187, 28);
@@ -240,11 +225,11 @@ namespace UI.WinForms
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.TXEsta);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TXComen);
+            this.Controls.Add(this.TXDescp);
             this.Controls.Add(this.LBDesc);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -268,13 +253,12 @@ namespace UI.WinForms
         private System.Windows.Forms.Button BTNRefre;
         private System.Windows.Forms.Button BTAdd;
         private System.Windows.Forms.Label LBDesc;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TXDescp;
+        private System.Windows.Forms.TextBox TXComen;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.TextBox TXEsta;
+        private System.Windows.Forms.CheckBox ChF;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView1;
