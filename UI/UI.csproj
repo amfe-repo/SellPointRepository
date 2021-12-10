@@ -66,6 +66,12 @@
     <Compile Include="WinForms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="WinForms\TipoEntidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\TipoEntidades.Designer.cs">
+      <DependentUpon>TipoEntidades.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -83,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WinForms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\TipoEntidades.resx">
+      <DependentUpon>TipoEntidades.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
