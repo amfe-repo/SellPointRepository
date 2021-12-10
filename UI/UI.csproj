@@ -93,6 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="WinForms\src\FondoMorado.jpg" />
+    <Content Include="WinForms\src\IconAcercaDe.ico" />
     <Content Include="WinForms\src\IconoLogin.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
