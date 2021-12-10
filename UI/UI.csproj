@@ -54,6 +54,12 @@
     <Compile Include="WinForms\AcercaDe.Designer.cs">
       <DependentUpon>AcercaDe.cs</DependentUpon>
     </Compile>
+    <Compile Include="WinForms\GrupoEntidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\GrupoEntidades.Designer.cs">
+      <DependentUpon>GrupoEntidades.cs</DependentUpon>
+    </Compile>
     <Compile Include="WinForms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,9 @@
     </Compile>
     <EmbeddedResource Include="WinForms\AcercaDe.resx">
       <DependentUpon>AcercaDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\GrupoEntidades.resx">
+      <DependentUpon>GrupoEntidades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WinForms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -93,6 +102,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="WinForms\src\FondoMorado.jpg" />
+    <Content Include="WinForms\src\FormIcon.ico" />
     <Content Include="WinForms\src\IconAcercaDe.ico" />
     <Content Include="WinForms\src\IconoLogin.ico" />
   </ItemGroup>
