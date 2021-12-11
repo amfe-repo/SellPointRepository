@@ -125,7 +125,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Layers\Layers.csproj">
+      <Project>{27ff4b74-8e31-466a-b21a-6144894012d3}</Project>
+      <Name>Layers</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="WinForms\src\Archivo.png" />
     <Content Include="WinForms\src\FondoMorado.jpg" />

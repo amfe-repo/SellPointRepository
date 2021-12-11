@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Layers.Data.DAOEntities
 {
-    internal class DAOTableEntitiesTypes
+    public class DAOTableEntitiesTypes
     {
     }
 }

@@ -123,7 +123,7 @@ namespace UI.WinForms
             this.LBDesc.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.LBDesc.Location = new System.Drawing.Point(86, 49);
             this.LBDesc.Name = "LBDesc";
-            this.LBDesc.Size = new System.Drawing.Size(94, 16);
+            this.LBDesc.Size = new System.Drawing.Size(93, 16);
             this.LBDesc.TabIndex = 1;
             this.LBDesc.Text = "Descripcion";
             // 
@@ -149,7 +149,7 @@ namespace UI.WinForms
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(340, 49);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 16);
+            this.label1.Size = new System.Drawing.Size(91, 16);
             this.label1.TabIndex = 5;
             this.label1.Text = "Comentario";
             // 
@@ -161,7 +161,7 @@ namespace UI.WinForms
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(102, 109);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 16);
+            this.label2.Size = new System.Drawing.Size(64, 16);
             this.label2.TabIndex = 6;
             this.label2.Text = "Estatus";
             // 
@@ -180,7 +180,7 @@ namespace UI.WinForms
             this.ChF.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.ChF.Location = new System.Drawing.Point(61, 3);
             this.ChF.Name = "ChF";
-            this.ChF.Size = new System.Drawing.Size(66, 20);
+            this.ChF.Size = new System.Drawing.Size(65, 20);
             this.ChF.TabIndex = 9;
             this.ChF.Text = "Falso";
             this.ChF.UseVisualStyleBackColor = false;
@@ -193,7 +193,7 @@ namespace UI.WinForms
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(340, 111);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 16);
+            this.label3.Size = new System.Drawing.Size(99, 16);
             this.label3.TabIndex = 10;
             this.label3.Text = "NoEliminable";
             // 
@@ -236,6 +236,7 @@ namespace UI.WinForms
             this.Name = "GrupoEntidades";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GruposEntidades";
+            this.Load += new System.EventHandler(this.GrupoEntidades_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

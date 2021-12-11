@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Layers.Data.DAOEntities;
 
 namespace UI.WinForms
 {
@@ -15,6 +16,12 @@ namespace UI.WinForms
         public GrupoEntidades()
         {
             InitializeComponent();
+        }
+
+        private void GrupoEntidades_Load(object sender, EventArgs e)
+        {
+            DAOTableEntitiesGroup dh = new DAOTableEntitiesGroup();
+            dataGridView1.DataSource = dh.GetData();
         }
     }
 }
