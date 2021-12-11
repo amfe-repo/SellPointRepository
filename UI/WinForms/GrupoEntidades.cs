@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Layers.Data.DAOEntities;
+using Layers.Data.DTOStructData;
 
 namespace UI.WinForms
 {
     public partial class GrupoEntidades : Form
     {
+        public int id = 0;
         public GrupoEntidades()
         {
             InitializeComponent();
@@ -20,8 +22,56 @@ namespace UI.WinForms
 
         private void GrupoEntidades_Load(object sender, EventArgs e)
         {
+            reload();
+        }
+
+        private void reload() 
+        {
             DAOTableEntitiesGroup dh = new DAOTableEntitiesGroup();
             dataGridView1.DataSource = dh.GetData();
+        }
+
+        private void BTAdd_Click(object sender, EventArgs e)
+        {
+            DTOEntitiesGroup ent = new DTOEntitiesGroup();
+            ent.DescriptionGroupEntitie = TXDescp.Text;
+            ent.ComentaryGroupEntitie = TXComen.Text;
+            ent.StatusGroupEntitie = comboBox1.SelectedItem.ToString();
+            ent.IsDeletedGroupEntitie = ChF.Checked;
+
+            DAOTableEntitiesGroup dh = new DAOTableEntitiesGroup();
+            dh.InsertData(ent);
+            reload();
+        }
+
+        private void BTNRefre_Click(object sender, EventArgs e)
+        {
+            DTOEntitiesGroup ent = new DTOEntitiesGroup();
+            ent.DescriptionGroupEntitie = TXDescp.Text;
+            ent.ComentaryGroupEntitie = TXComen.Text;
+            ent.StatusGroupEntitie = comboBox1.SelectedItem.ToString();
+            ent.IsDeletedGroupEntitie = ChF.Checked;
+            ent.IdGroupEntitie = id;
+
+            DAOTableEntitiesGroup dh = new DAOTableEntitiesGroup();
+            dh.UpdateData(ent);
+            reload();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            TXDescp.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            TXComen.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            comboBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            ChF.Checked = (bool)dataGridView1.Rows[e.RowIndex].Cells[4].Value;
+            id = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+        }
+
+        private void BTNDel_Click(object sender, EventArgs e)
+        {
+            DAOTableEntitiesGroup dh = new DAOTableEntitiesGroup();
+            dh.DeleteData(id);
+            reload();
         }
     }
 }

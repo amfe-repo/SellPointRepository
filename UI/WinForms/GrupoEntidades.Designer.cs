@@ -40,11 +40,11 @@ namespace UI.WinForms
             this.TXComen = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.TXEsta = new System.Windows.Forms.TextBox();
             this.ChF = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -75,6 +75,7 @@ namespace UI.WinForms
             this.BTNDel.TabIndex = 3;
             this.BTNDel.Text = "Borrar";
             this.BTNDel.UseVisualStyleBackColor = true;
+            this.BTNDel.Click += new System.EventHandler(this.BTNDel_Click);
             // 
             // BTNSearch
             // 
@@ -101,6 +102,7 @@ namespace UI.WinForms
             this.BTNRefre.TabIndex = 1;
             this.BTNRefre.Text = "Modificar";
             this.BTNRefre.UseVisualStyleBackColor = true;
+            this.BTNRefre.Click += new System.EventHandler(this.BTNRefre_Click);
             // 
             // BTAdd
             // 
@@ -114,6 +116,7 @@ namespace UI.WinForms
             this.BTAdd.TabIndex = 0;
             this.BTAdd.Text = "Agregar";
             this.BTAdd.UseVisualStyleBackColor = true;
+            this.BTAdd.Click += new System.EventHandler(this.BTAdd_Click);
             // 
             // LBDesc
             // 
@@ -165,13 +168,6 @@ namespace UI.WinForms
             this.label2.TabIndex = 6;
             this.label2.Text = "Estatus";
             // 
-            // TXEsta
-            // 
-            this.TXEsta.Location = new System.Drawing.Point(45, 128);
-            this.TXEsta.Name = "TXEsta";
-            this.TXEsta.Size = new System.Drawing.Size(187, 20);
-            this.TXEsta.TabIndex = 7;
-            // 
             // ChF
             // 
             this.ChF.AutoSize = true;
@@ -214,6 +210,18 @@ namespace UI.WinForms
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(465, 214);
             this.dataGridView1.TabIndex = 12;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Activa",
+            "Inactiva"});
+            this.comboBox1.Location = new System.Drawing.Point(45, 132);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(187, 21);
+            this.comboBox1.TabIndex = 13;
             // 
             // GrupoEntidades
             // 
@@ -222,10 +230,10 @@ namespace UI.WinForms
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(768, 450);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.TXEsta);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TXComen);
@@ -258,10 +266,10 @@ namespace UI.WinForms
         private System.Windows.Forms.TextBox TXComen;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox TXEsta;
         private System.Windows.Forms.CheckBox ChF;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
