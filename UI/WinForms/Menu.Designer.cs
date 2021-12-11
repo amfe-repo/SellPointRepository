@@ -57,7 +57,7 @@ namespace UI.WinForms
             this.MenuS});
             this.MS.Location = new System.Drawing.Point(0, 0);
             this.MS.Name = "MS";
-            this.MS.Size = new System.Drawing.Size(106, 433);
+            this.MS.Size = new System.Drawing.Size(126, 545);
             this.MS.TabIndex = 0;
             this.MS.Text = "Menu";
             // 
@@ -75,7 +75,7 @@ namespace UI.WinForms
             this.MenuA.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.MenuA.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.MenuA.Name = "MenuA";
-            this.MenuA.Size = new System.Drawing.Size(93, 20);
+            this.MenuA.Size = new System.Drawing.Size(113, 20);
             this.MenuA.Text = "Archivos";
             // 
             // GrupoE
@@ -83,12 +83,14 @@ namespace UI.WinForms
             this.GrupoE.Name = "GrupoE";
             this.GrupoE.Size = new System.Drawing.Size(206, 22);
             this.GrupoE.Text = "Grupos Entidades";
+            this.GrupoE.Click += new System.EventHandler(this.GrupoE_Click);
             // 
             // TipoE
             // 
             this.TipoE.Name = "TipoE";
             this.TipoE.Size = new System.Drawing.Size(206, 22);
             this.TipoE.Text = "Tipos Entidades";
+            this.TipoE.Click += new System.EventHandler(this.TipoE_Click);
             // 
             // Ent
             // 
@@ -108,7 +110,7 @@ namespace UI.WinForms
             this.MenuS.Image = ((System.Drawing.Image)(resources.GetObject("MenuS.Image")));
             this.MenuS.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.MenuS.Name = "MenuS";
-            this.MenuS.Size = new System.Drawing.Size(93, 20);
+            this.MenuS.Size = new System.Drawing.Size(113, 20);
             this.MenuS.Text = "Sistema";
             // 
             // AcercaD
@@ -116,18 +118,21 @@ namespace UI.WinForms
             this.AcercaD.Name = "AcercaD";
             this.AcercaD.Size = new System.Drawing.Size(180, 22);
             this.AcercaD.Text = "Acerca De";
+            this.AcercaD.Click += new System.EventHandler(this.AcercaD_Click);
             // 
             // Log
             // 
             this.Log.Name = "Log";
             this.Log.Size = new System.Drawing.Size(180, 22);
             this.Log.Text = "Login";
+            this.Log.Click += new System.EventHandler(this.Log_Click);
             // 
             // Exit
             // 
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(180, 22);
             this.Exit.Text = "Salir";
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // Status
             // 
@@ -137,9 +142,9 @@ namespace UI.WinForms
             this.Status.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.LBS1,
             this.toolStripStatusLabel1});
-            this.Status.Location = new System.Drawing.Point(106, 411);
+            this.Status.Location = new System.Drawing.Point(126, 523);
             this.Status.Name = "Status";
-            this.Status.Size = new System.Drawing.Size(652, 22);
+            this.Status.Size = new System.Drawing.Size(844, 22);
             this.Status.TabIndex = 1;
             this.Status.Text = "statusStrip1";
             // 
@@ -168,10 +173,11 @@ namespace UI.WinForms
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(758, 433);
+            this.ClientSize = new System.Drawing.Size(970, 545);
             this.Controls.Add(this.Status);
             this.Controls.Add(this.MS);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.MS;
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
