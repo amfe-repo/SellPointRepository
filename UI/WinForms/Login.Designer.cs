@@ -77,9 +77,9 @@
             this.TXPass.Location = new System.Drawing.Point(169, 279);
             this.TXPass.Multiline = true;
             this.TXPass.Name = "TXPass";
+            this.TXPass.PasswordChar = '*';
             this.TXPass.Size = new System.Drawing.Size(219, 28);
             this.TXPass.TabIndex = 3;
-            this.TXPass.UseSystemPasswordChar = true;
             // 
             // BTLog
             // 
