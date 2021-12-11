@@ -33,7 +33,7 @@
             this.LBPass = new System.Windows.Forms.Label();
             this.TXUser = new System.Windows.Forms.TextBox();
             this.TXPass = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BTLog = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -44,9 +44,9 @@
             this.LBUser.BackColor = System.Drawing.Color.Transparent;
             this.LBUser.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBUser.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LBUser.Location = new System.Drawing.Point(239, 188);
+            this.LBUser.Location = new System.Drawing.Point(242, 188);
             this.LBUser.Name = "LBUser";
-            this.LBUser.Size = new System.Drawing.Size(90, 24);
+            this.LBUser.Size = new System.Drawing.Size(72, 19);
             this.LBUser.TabIndex = 0;
             this.LBUser.Text = "Usuario";
             // 
@@ -56,16 +56,16 @@
             this.LBPass.BackColor = System.Drawing.Color.Transparent;
             this.LBPass.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBPass.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LBPass.Location = new System.Drawing.Point(222, 252);
+            this.LBPass.Location = new System.Drawing.Point(226, 252);
             this.LBPass.Name = "LBPass";
-            this.LBPass.Size = new System.Drawing.Size(127, 24);
+            this.LBPass.Size = new System.Drawing.Size(105, 19);
             this.LBPass.TabIndex = 1;
             this.LBPass.Text = "Contraseña";
             // 
             // TXUser
             // 
             this.TXUser.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXUser.Location = new System.Drawing.Point(171, 215);
+            this.TXUser.Location = new System.Drawing.Point(169, 215);
             this.TXUser.Multiline = true;
             this.TXUser.Name = "TXUser";
             this.TXUser.Size = new System.Drawing.Size(219, 28);
@@ -74,25 +74,25 @@
             // TXPass
             // 
             this.TXPass.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXPass.Location = new System.Drawing.Point(171, 279);
+            this.TXPass.Location = new System.Drawing.Point(169, 279);
             this.TXPass.Multiline = true;
             this.TXPass.Name = "TXPass";
+            this.TXPass.PasswordChar = '*';
             this.TXPass.Size = new System.Drawing.Size(219, 28);
             this.TXPass.TabIndex = 3;
-            this.TXPass.UseSystemPasswordChar = true;
             // 
-            // button1
+            // BTLog
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(208, 333);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(156, 58);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Iniciar Sesión";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BTLog.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BTLog.BackgroundImage")));
+            this.BTLog.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BTLog.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTLog.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BTLog.Location = new System.Drawing.Point(200, 333);
+            this.BTLog.Name = "BTLog";
+            this.BTLog.Size = new System.Drawing.Size(156, 58);
+            this.BTLog.TabIndex = 4;
+            this.BTLog.Text = "Iniciar Sesión";
+            this.BTLog.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -112,13 +112,13 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(566, 453);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BTLog);
             this.Controls.Add(this.TXPass);
             this.Controls.Add(this.TXUser);
             this.Controls.Add(this.LBPass);
             this.Controls.Add(this.LBUser);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
@@ -134,7 +134,7 @@
         private System.Windows.Forms.Label LBPass;
         private System.Windows.Forms.TextBox TXUser;
         private System.Windows.Forms.TextBox TXPass;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BTLog;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
