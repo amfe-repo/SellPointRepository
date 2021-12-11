@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Layers.Data.DTOStructData
 {
-    internal class DTOEntitieTypes
+    public class DTOEntitieTypes
     {
         public int IdTypeEntitie { get; set; }
         public string DescriptionTypeEntitie { get; set; }
