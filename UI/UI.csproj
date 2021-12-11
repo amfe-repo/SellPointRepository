@@ -66,6 +66,12 @@
     <Compile Include="WinForms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="WinForms\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
     <Compile Include="WinForms\TipoEntidades.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     <EmbeddedResource Include="WinForms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WinForms\TipoEntidades.resx">
       <DependentUpon>TipoEntidades.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,10 +119,14 @@
     <Folder Include="Ventanas\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="WinForms\src\Archivo.png" />
     <Content Include="WinForms\src\FondoMorado.jpg" />
+    <Content Include="WinForms\src\FondoOscuro.jpg" />
     <Content Include="WinForms\src\FormIcon.ico" />
+    <Content Include="WinForms\src\IcoMenu.ico" />
     <Content Include="WinForms\src\IconAcercaDe.ico" />
     <Content Include="WinForms\src\IconoLogin.ico" />
+    <Content Include="WinForms\src\Sistema.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
