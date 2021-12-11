@@ -31,10 +31,10 @@ namespace UI.WinForms
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GrupoEntidades));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.BTAdd = new System.Windows.Forms.Button();
-            this.BTNRefre = new System.Windows.Forms.Button();
-            this.BTNSearch = new System.Windows.Forms.Button();
             this.BTNDel = new System.Windows.Forms.Button();
+            this.BTNSearch = new System.Windows.Forms.Button();
+            this.BTNRefre = new System.Windows.Forms.Button();
+            this.BTAdd = new System.Windows.Forms.Button();
             this.LBDesc = new System.Windows.Forms.Label();
             this.TXDescp = new System.Windows.Forms.TextBox();
             this.TXComen = new System.Windows.Forms.TextBox();
@@ -58,36 +58,23 @@ namespace UI.WinForms
             this.panel1.Controls.Add(this.BTNSearch);
             this.panel1.Controls.Add(this.BTNRefre);
             this.panel1.Controls.Add(this.BTAdd);
-            this.panel1.Location = new System.Drawing.Point(567, 38);
+            this.panel1.Location = new System.Drawing.Point(544, 38);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(189, 373);
             this.panel1.TabIndex = 0;
             // 
-            // BTAdd
+            // BTNDel
             // 
-            this.BTAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BTAdd.BackgroundImage")));
-            this.BTAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BTAdd.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTAdd.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.BTAdd.Location = new System.Drawing.Point(30, 25);
-            this.BTAdd.Name = "BTAdd";
-            this.BTAdd.Size = new System.Drawing.Size(134, 48);
-            this.BTAdd.TabIndex = 0;
-            this.BTAdd.Text = "Agregar";
-            this.BTAdd.UseVisualStyleBackColor = true;
-            // 
-            // BTNRefre
-            // 
-            this.BTNRefre.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BTNRefre.BackgroundImage")));
-            this.BTNRefre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BTNRefre.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNRefre.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BTNRefre.Location = new System.Drawing.Point(30, 115);
-            this.BTNRefre.Name = "BTNRefre";
-            this.BTNRefre.Size = new System.Drawing.Size(134, 48);
-            this.BTNRefre.TabIndex = 1;
-            this.BTNRefre.Text = "Modificar";
-            this.BTNRefre.UseVisualStyleBackColor = true;
+            this.BTNDel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BTNDel.BackgroundImage")));
+            this.BTNDel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BTNDel.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNDel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BTNDel.Location = new System.Drawing.Point(30, 297);
+            this.BTNDel.Name = "BTNDel";
+            this.BTNDel.Size = new System.Drawing.Size(134, 48);
+            this.BTNDel.TabIndex = 3;
+            this.BTNDel.Text = "Borrar";
+            this.BTNDel.UseVisualStyleBackColor = true;
             // 
             // BTNSearch
             // 
@@ -102,18 +89,31 @@ namespace UI.WinForms
             this.BTNSearch.Text = "Buscar";
             this.BTNSearch.UseVisualStyleBackColor = true;
             // 
-            // BTNDel
+            // BTNRefre
             // 
-            this.BTNDel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BTNDel.BackgroundImage")));
-            this.BTNDel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BTNDel.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNDel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BTNDel.Location = new System.Drawing.Point(30, 297);
-            this.BTNDel.Name = "BTNDel";
-            this.BTNDel.Size = new System.Drawing.Size(134, 48);
-            this.BTNDel.TabIndex = 3;
-            this.BTNDel.Text = "Borrar";
-            this.BTNDel.UseVisualStyleBackColor = true;
+            this.BTNRefre.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BTNRefre.BackgroundImage")));
+            this.BTNRefre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BTNRefre.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNRefre.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BTNRefre.Location = new System.Drawing.Point(30, 115);
+            this.BTNRefre.Name = "BTNRefre";
+            this.BTNRefre.Size = new System.Drawing.Size(134, 48);
+            this.BTNRefre.TabIndex = 1;
+            this.BTNRefre.Text = "Modificar";
+            this.BTNRefre.UseVisualStyleBackColor = true;
+            // 
+            // BTAdd
+            // 
+            this.BTAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BTAdd.BackgroundImage")));
+            this.BTAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BTAdd.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTAdd.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.BTAdd.Location = new System.Drawing.Point(30, 25);
+            this.BTAdd.Name = "BTAdd";
+            this.BTAdd.Size = new System.Drawing.Size(134, 48);
+            this.BTAdd.TabIndex = 0;
+            this.BTAdd.Text = "Agregar";
+            this.BTAdd.UseVisualStyleBackColor = true;
             // 
             // LBDesc
             // 
