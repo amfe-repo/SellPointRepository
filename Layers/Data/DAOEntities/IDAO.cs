@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace Layers.Data.DAOEntities
 {
-    internal interface IDAO<in T>
+    public interface IDAO<T>
     {
-        
+        List<T> GetData();
+        List<T> GetDataById(int id);
+        void InsertData(T entitie);
+        void UpdateData(T entitie);
+        void DeleteData(int id);
+        T GetDataSpecify(string name, string password);
+
     }
 }
