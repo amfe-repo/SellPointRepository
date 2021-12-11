@@ -72,6 +72,12 @@
     <Compile Include="WinForms\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="WinForms\SplashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\SplashForm.Designer.cs">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="WinForms\TipoEntidades.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
     <EmbeddedResource Include="WinForms\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\SplashForm.resx">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WinForms\TipoEntidades.resx">
       <DependentUpon>TipoEntidades.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,9 +124,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Ventanas\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="WinForms\src\Archivo.png" />
     <Content Include="WinForms\src\FondoMorado.jpg" />

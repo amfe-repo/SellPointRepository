@@ -16,5 +16,10 @@ namespace UI.WinForms
         {
             InitializeComponent();
         }
+
+        private void BTLog_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

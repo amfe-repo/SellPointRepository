@@ -93,6 +93,7 @@
             this.BTLog.TabIndex = 4;
             this.BTLog.Text = "Iniciar Sesión";
             this.BTLog.UseVisualStyleBackColor = true;
+            this.BTLog.Click += new System.EventHandler(this.BTLog_Click);
             // 
             // pictureBox1
             // 
