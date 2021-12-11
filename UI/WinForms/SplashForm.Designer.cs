@@ -33,6 +33,7 @@
             this.CmpTemp = new System.Windows.Forms.Timer(this.components);
             this.pnlBaseCharge = new System.Windows.Forms.Panel();
             this.pnlCharge = new System.Windows.Forms.Panel();
+            this.CmpTempOpacity = new System.Windows.Forms.Timer(this.components);
             this.pnlBaseCharge.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +59,10 @@
             this.pnlCharge.Size = new System.Drawing.Size(48, 21);
             this.pnlCharge.TabIndex = 0;
             // 
+            // CmpTempOpacity
+            // 
+            this.CmpTempOpacity.Tick += new System.EventHandler(this.CmpTempOpacity_Tick);
+            // 
             // SplashForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -65,11 +70,13 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(672, 398);
             this.Controls.Add(this.pnlBaseCharge);
-            this.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SplashForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SplashForm";
             this.Load += new System.EventHandler(this.SplashForm_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SplashForm_MouseDown);
             this.pnlBaseCharge.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -80,5 +87,6 @@
         private System.Windows.Forms.Timer CmpTemp;
         private System.Windows.Forms.Panel pnlBaseCharge;
         private System.Windows.Forms.Panel pnlCharge;
+        private System.Windows.Forms.Timer CmpTempOpacity;
     }
 }

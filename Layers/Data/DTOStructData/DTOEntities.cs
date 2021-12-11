@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Layers.Data
+namespace Layers.Data.DTOStructData
 {
-    internal class DAO
+    internal class DTOEntities
     {
+
     }
 }

@@ -42,8 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bussiness\Validations.cs" />
-    <Compile Include="Data\Connection.cs" />
-    <Compile Include="Data\DAO.cs" />
+    <Compile Include="Data\DAOEntities\Connection.cs" />
+    <Compile Include="Data\DAOEntities\DAOTableEntitiesGroup.cs" />
+    <Compile Include="Data\DAOEntities\DAOTableEntitiesTypes.cs" />
+    <Compile Include="Data\DAOEntities\IDAO.cs" />
+    <Compile Include="Data\DAOEntities\DAOTableEntities.cs" />
+    <Compile Include="Data\DTOStructData\DTOEntities.cs" />
+    <Compile Include="Data\DTOStructData\DTOEntitiesGroup.cs" />
+    <Compile Include="Data\DTOStructData\DTOEntitieTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
