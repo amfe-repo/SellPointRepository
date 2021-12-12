@@ -68,5 +68,18 @@ namespace UI.WinForms
                 ErrorProv4.Clear();
             }
         }
+
+        private void TXTel_TextChanged(object sender, EventArgs e)
+        {
+            if (TXTel.Text.Trim() == "")
+            {
+                ErrorProv5.SetError(TXTel, "Error, campo vacio");
+                TXTel.Focus();
+            }
+            else
+            {
+                ErrorProv5.Clear();
+            }
+        }
     }
 }

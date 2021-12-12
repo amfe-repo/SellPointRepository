@@ -284,6 +284,7 @@ namespace UI.WinForms
             this.TXTel.Name = "TXTel";
             this.TXTel.Size = new System.Drawing.Size(172, 20);
             this.TXTel.TabIndex = 14;
+            this.TXTel.TextChanged += new System.EventHandler(this.TXTel_TextChanged);
             // 
             // label6
             // 
