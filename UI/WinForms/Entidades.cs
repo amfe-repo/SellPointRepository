@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Layers.Data.DAOEntities;
+using Layers.Data.DTOStructData;
 
 namespace UI.WinForms
 {
@@ -58,10 +60,10 @@ namespace UI.WinForms
 
         private void TXND_TextChanged(object sender, EventArgs e)
         {
-            if (TXND.Text.Trim() == "")
+            if (txtNoDocument.Text.Trim() == "")
             {
-                ErrorProv4.SetError(TXND, "Error, campo vacio");
-                TXND.Focus();
+                ErrorProv4.SetError(txtNoDocument, "Error, campo vacio");
+                txtNoDocument.Focus();
             }
             else
             {
@@ -71,10 +73,10 @@ namespace UI.WinForms
 
         private void TXTel_TextChanged(object sender, EventArgs e)
         {
-            if (TXTel.Text.Trim() == "")
+            if (txtTel.Text.Trim() == "")
             {
-                ErrorProv5.SetError(TXTel, "Error, campo vacio");
-                TXTel.Focus();
+                ErrorProv5.SetError(txtTel, "Error, campo vacio");
+                txtTel.Focus();
             }
             else
             {
@@ -198,6 +200,28 @@ namespace UI.WinForms
                 ErrorProv14.Clear();
             }
         }
+        private void reload()
+        {
+            DAOTableEntities dh = new DAOTableEntities();
+            DAOTableEntitiesTypes entitiesType = new DAOTableEntitiesTypes();
+            DAOTableEntitiesGroup entitiesGroup = new DAOTableEntitiesGroup();
+
+            dataGridView1.DataSource = dh.GetData();
+
+            /*CBT.Items.Clear();
+
+            foreach (DTOEntitiesGroup t in entitiesGroup.GetData())
+            {
+                CBT.Items.Add(t.IdGroupEntitie);
+            }
+            */
+        }
+
+        private void Entidades_Load(object sender, EventArgs e)
+        {
+            reload();
+        }
+
     }
     
 }

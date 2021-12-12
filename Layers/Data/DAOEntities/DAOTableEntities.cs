@@ -87,8 +87,8 @@ namespace Layers.Data.DAOEntities
             try
             {
                 command.Connection = connection;
-                command.CommandText = "INSERT INTO Entidades(idEntidad, Descripcion, Direccion, Localidad, TipoEntidad, TipoDocumento, NumeroDocumento, Telefonos, URLPaginaWeb, URLFacebook, URLInstagram, URLTikTok, idGrupoEntidad, idTipoEntidad, LimiteCredito, UserNameEntidad, RolUserEntidad, Comentario, Estatus, NoEliminable, FechaRegistro)" +
-                    "VALUES(@idE, @desc, @direcc, @Local, @TipE, @TipoD, @NumeroD, @Tel, @URLP, @URLFace, @URLInst, @Twitt, @URLTik, @idGroup, @idTipoE, @LimiteC, @UserNE, @PassE, @RolUE @com, @est, @elim, @FechaReg)";
+                command.CommandText = "INSERT INTO Entidades(idEntidad, Descripcion, Direccion, Localidad, TipoEntidad, TipoDocumento, NumeroDocumento, Telefonos, URLPaginaWeb, URLFacebook, URLInstagram, URLTikTok, idGrupoEntidad, idTipoEntidad, LimiteCredito, UserNameEntidad, RolUserEntidad, Comentario, Estatus, NoEliminable, FechaRegistro) " +
+                    "VALUES(@idE, @desc, @direcc, @Local, @TipE, @TipoD, @NumeroD, @Tel, @URLP, @URLFace, @URLInst, @Twitt, @URLTik, @idGroup, @idTipoE, @LimiteC, @UserNE, @PassE, @RolUE, @com, @est, @elim, @FechaReg)";
                 command.Parameters.AddWithValue("@idE", entitie.IdEntitie);
                 command.Parameters.AddWithValue("@desc", entitie.DescriptionEntitie);
                 command.Parameters.AddWithValue("@direcc", entitie.DirecctionEntitie);
@@ -99,10 +99,19 @@ namespace Layers.Data.DAOEntities
                 command.Parameters.AddWithValue("@Tel", entitie.PhoneEntitie);
                 command.Parameters.AddWithValue("@URLP", entitie.UrlWebEntitie);
                 command.Parameters.AddWithValue("@URLFace", entitie.UrlFacebookEntitie);
-                //command.Parameters.AddWithValue("@com", entitie.ComentaryTypeEntitie);
-                //command.Parameters.AddWithValue("@est", entitie.StatusTypeEntitie);
-                //command.Parameters.AddWithValue("@elim", entitie.IsDeletedTypeEntitie);
-                //command.Parameters.AddWithValue("@idGroup", entitie.IdEntitieGroup);
+                command.Parameters.AddWithValue("@URLInst", entitie.UrlInstagramEntitie);
+                command.Parameters.AddWithValue("@Twitt", entitie.UrlTwitterEntitie);
+                command.Parameters.AddWithValue("@URLTik", entitie.UrlTikTokEntitie);
+                command.Parameters.AddWithValue("@idGroup", entitie.IdEntitieGroup);
+                command.Parameters.AddWithValue("@idTipoE", entitie.IdTypeEntitie);
+                command.Parameters.AddWithValue("@LimiteC", entitie.CrediteLimitEntitie);
+                command.Parameters.AddWithValue("@UserNE", entitie.UserNameEntitie);
+                command.Parameters.AddWithValue("@PassE", entitie.PasswordEntitie);
+                command.Parameters.AddWithValue("@RolUE", entitie.RoleUserEntitie);
+                command.Parameters.AddWithValue("@com", entitie.ComentaryEntitie);
+                command.Parameters.AddWithValue("@est", entitie.StatusEntitie);
+                command.Parameters.AddWithValue("@elim", entitie.IsDeletedEntitie);
+                command.Parameters.AddWithValue("@FechaReg", entitie.RegisterDateEntitie);
                 OpenConnection();
 
                 command.ExecuteNonQuery();
@@ -125,12 +134,12 @@ namespace Layers.Data.DAOEntities
                 command.Connection = connection;
                 command.CommandText = "UPDATE TiposEntidades SET Descripcion = @desc, idGrupoEntidad = @idGroup, Comentario = @com, Estatus = @est, NoEliminable = @elim" +
                     " WHERE idTipoEntidad = @id";
-                command.Parameters.AddWithValue("@desc", entitie.DescriptionTypeEntitie);
+                /*command.Parameters.AddWithValue("@desc", entitie.DescriptionTypeEntitie);
                 command.Parameters.AddWithValue("@com", entitie.ComentaryTypeEntitie);
                 command.Parameters.AddWithValue("@est", entitie.StatusTypeEntitie);
                 command.Parameters.AddWithValue("@elim", entitie.IsDeletedTypeEntitie);
                 command.Parameters.AddWithValue("@idGroup", entitie.IdEntitieGroup);
-                command.Parameters.AddWithValue("@id", entitie.IdTypeEntitie);
+                command.Parameters.AddWithValue("@id", entitie.IdTypeEntitie);*/
                 OpenConnection();
 
                 command.ExecuteNonQuery();
