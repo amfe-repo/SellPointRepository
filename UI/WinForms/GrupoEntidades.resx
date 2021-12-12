@@ -390,6 +390,9 @@
         HpEEH62bouE0dHoerReIq6fF2L+CFR5SbZdOY8hLHSBewSTk14HNHjVR0WQf8HfkWPfsH//Z
 </value>
   </data>
+  <metadata name="ErrorProv1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>22, 22</value>
+  </metadata>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAQEBAQEBAQFBQQGBgYGBgkIBwcICQ0KCgoKCg0UDQ8NDQ8N
@@ -525,4 +528,10 @@
         UB2/qv8LjPFBGgaBy5IAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="ErrorProv2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>184, 22</value>
+  </metadata>
+  <metadata name="ErrorProv3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>347, 22</value>
+  </metadata>
 </root>

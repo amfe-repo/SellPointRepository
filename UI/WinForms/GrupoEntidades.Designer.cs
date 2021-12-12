@@ -29,6 +29,7 @@ namespace UI.WinForms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GrupoEntidades));
             this.panel1 = new System.Windows.Forms.Panel();
             this.BTNDel = new System.Windows.Forms.Button();
@@ -45,9 +46,15 @@ namespace UI.WinForms
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.ErrorProv1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrorProv2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrorProv3 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -126,7 +133,7 @@ namespace UI.WinForms
             this.LBDesc.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.LBDesc.Location = new System.Drawing.Point(86, 49);
             this.LBDesc.Name = "LBDesc";
-            this.LBDesc.Size = new System.Drawing.Size(93, 16);
+            this.LBDesc.Size = new System.Drawing.Size(94, 16);
             this.LBDesc.TabIndex = 1;
             this.LBDesc.Text = "Descripcion";
             // 
@@ -136,6 +143,7 @@ namespace UI.WinForms
             this.TXDescp.Name = "TXDescp";
             this.TXDescp.Size = new System.Drawing.Size(187, 20);
             this.TXDescp.TabIndex = 2;
+            this.TXDescp.TextChanged += new System.EventHandler(this.TXDescp_TextChanged);
             // 
             // TXComen
             // 
@@ -143,6 +151,7 @@ namespace UI.WinForms
             this.TXComen.Name = "TXComen";
             this.TXComen.Size = new System.Drawing.Size(187, 20);
             this.TXComen.TabIndex = 4;
+            this.TXComen.TextChanged += new System.EventHandler(this.TXComen_TextChanged);
             // 
             // label1
             // 
@@ -152,7 +161,7 @@ namespace UI.WinForms
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(340, 49);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 16);
+            this.label1.Size = new System.Drawing.Size(92, 16);
             this.label1.TabIndex = 5;
             this.label1.Text = "Comentario";
             // 
@@ -164,7 +173,7 @@ namespace UI.WinForms
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(102, 109);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 16);
+            this.label2.Size = new System.Drawing.Size(65, 16);
             this.label2.TabIndex = 6;
             this.label2.Text = "Estatus";
             // 
@@ -176,7 +185,7 @@ namespace UI.WinForms
             this.ChF.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.ChF.Location = new System.Drawing.Point(61, 3);
             this.ChF.Name = "ChF";
-            this.ChF.Size = new System.Drawing.Size(65, 20);
+            this.ChF.Size = new System.Drawing.Size(66, 20);
             this.ChF.TabIndex = 9;
             this.ChF.Text = "Falso";
             this.ChF.UseVisualStyleBackColor = false;
@@ -189,7 +198,7 @@ namespace UI.WinForms
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(340, 111);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 16);
+            this.label3.Size = new System.Drawing.Size(100, 16);
             this.label3.TabIndex = 10;
             this.label3.Text = "NoEliminable";
             // 
@@ -222,6 +231,19 @@ namespace UI.WinForms
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(187, 21);
             this.comboBox1.TabIndex = 13;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // ErrorProv1
+            // 
+            this.ErrorProv1.ContainerControl = this;
+            // 
+            // ErrorProv2
+            // 
+            this.ErrorProv2.ContainerControl = this;
+            // 
+            // ErrorProv3
+            // 
+            this.ErrorProv3.ContainerControl = this;
             // 
             // GrupoEntidades
             // 
@@ -249,6 +271,9 @@ namespace UI.WinForms
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,5 +296,8 @@ namespace UI.WinForms
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ErrorProvider ErrorProv1;
+        private System.Windows.Forms.ErrorProvider ErrorProv2;
+        private System.Windows.Forms.ErrorProvider ErrorProv3;
     }
 }

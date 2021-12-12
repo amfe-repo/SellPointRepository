@@ -16,5 +16,31 @@ namespace UI.WinForms
         {
             InitializeComponent();
         }
+
+        private void TXDescp2_TextChanged(object sender, EventArgs e)
+        {
+            if (TXDescp2.Text.Trim() == "")
+            {
+                ErrorProv1.SetError(TXDescp2, "Error, campo vacio");
+                TXDescp2.Focus();
+            }
+            else
+            {
+                ErrorProv1.Clear();
+            }
+        }
+
+        private void TXComen2_TextChanged(object sender, EventArgs e)
+        {
+            if (TXComen2.Text.Trim() == "")
+            {
+                ErrorProv1.SetError(TXComen2, "Error, campo vacio");
+                TXComen2.Focus();
+            }
+            else
+            {
+                ErrorProv1.Clear();
+            }
+        }
     }
 }

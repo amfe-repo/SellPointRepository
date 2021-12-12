@@ -73,5 +73,44 @@ namespace UI.WinForms
             dh.DeleteData(id);
             reload();
         }
+
+        private void TXDescp_TextChanged(object sender, EventArgs e)
+        {
+            if (TXDescp.Text.Trim() == "")
+            {
+                ErrorProv1.SetError(TXDescp, "Error, campo vacio");
+                TXDescp.Focus();
+            }
+            else
+            {
+                ErrorProv1.Clear();
+            }
+        }
+
+        private void TXComen_TextChanged(object sender, EventArgs e)
+        {
+            if (TXComen.Text.Trim() == "")
+            {
+                ErrorProv3.SetError(TXComen, "Error, campo vacio");
+                TXComen.Focus();
+            }
+            else
+            {
+                ErrorProv3.Clear();
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.Text == "")
+            {
+                ErrorProv2.SetError(comboBox1, "Error, campo vacio");
+                comboBox1.Focus();
+            }
+            else
+            {
+                ErrorProv2.Clear();
+            }
+        }
     }
 }

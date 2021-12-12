@@ -42,8 +42,6 @@ namespace UI.WinForms
             this.TXLoc = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.TXTE = new System.Windows.Forms.TextBox();
-            this.TXTD = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.TXND = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -65,7 +63,6 @@ namespace UI.WinForms
             this.label13 = new System.Windows.Forms.Label();
             this.TXPassE = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.TXRUser = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.TXComent = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -75,6 +72,11 @@ namespace UI.WinForms
             this.ChF3 = new System.Windows.Forms.CheckBox();
             this.NoE = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -213,20 +215,6 @@ namespace UI.WinForms
             this.label3.Size = new System.Drawing.Size(96, 16);
             this.label3.TabIndex = 7;
             this.label3.Text = "TipoEntidad";
-            // 
-            // TXTE
-            // 
-            this.TXTE.Location = new System.Drawing.Point(31, 318);
-            this.TXTE.Name = "TXTE";
-            this.TXTE.Size = new System.Drawing.Size(172, 20);
-            this.TXTE.TabIndex = 8;
-            // 
-            // TXTD
-            // 
-            this.TXTD.Location = new System.Drawing.Point(31, 368);
-            this.TXTD.Name = "TXTD";
-            this.TXTD.Size = new System.Drawing.Size(172, 20);
-            this.TXTD.TabIndex = 10;
             // 
             // label4
             // 
@@ -430,13 +418,6 @@ namespace UI.WinForms
             this.label14.TabIndex = 29;
             this.label14.Text = "PassworEntidad";
             // 
-            // TXRUser
-            // 
-            this.TXRUser.Location = new System.Drawing.Point(461, 215);
-            this.TXRUser.Name = "TXRUser";
-            this.TXRUser.Size = new System.Drawing.Size(172, 20);
-            this.TXRUser.TabIndex = 32;
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -530,6 +511,61 @@ namespace UI.WinForms
             this.dataGridView1.Size = new System.Drawing.Size(306, 391);
             this.dataGridView1.TabIndex = 39;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Física",
+            "Jurídica"});
+            this.comboBox1.Location = new System.Drawing.Point(29, 314);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(173, 21);
+            this.comboBox1.TabIndex = 40;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "RNC",
+            "Cédula",
+            "Pasaporte"});
+            this.comboBox2.Location = new System.Drawing.Point(31, 368);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(173, 21);
+            this.comboBox2.TabIndex = 41;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Admin\t",
+            "Supervisor",
+            "User"});
+            this.comboBox3.Location = new System.Drawing.Point(460, 215);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(173, 21);
+            this.comboBox3.TabIndex = 42;
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(460, 431);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(173, 21);
+            this.comboBox4.TabIndex = 43;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label18.Location = new System.Drawing.Point(515, 412);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(56, 16);
+            this.label18.TabIndex = 44;
+            this.label18.Text = "TipoID";
+            // 
             // Entidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -537,6 +573,11 @@ namespace UI.WinForms
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(977, 555);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.NoE);
@@ -544,7 +585,6 @@ namespace UI.WinForms
             this.Controls.Add(this.label17);
             this.Controls.Add(this.TXComent);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.TXRUser);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.TXPassE);
             this.Controls.Add(this.label14);
@@ -566,9 +606,7 @@ namespace UI.WinForms
             this.Controls.Add(this.label6);
             this.Controls.Add(this.TXND);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.TXTD);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.TXTE);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.TXLoc);
             this.Controls.Add(this.label2);
@@ -604,8 +642,6 @@ namespace UI.WinForms
         private System.Windows.Forms.TextBox TXLoc;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox TXTE;
-        private System.Windows.Forms.TextBox TXTD;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox TXND;
         private System.Windows.Forms.Label label5;
@@ -627,7 +663,6 @@ namespace UI.WinForms
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox TXPassE;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox TXRUser;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox TXComent;
         private System.Windows.Forms.Label label16;
@@ -637,5 +672,10 @@ namespace UI.WinForms
         private System.Windows.Forms.CheckBox ChF3;
         private System.Windows.Forms.Label NoE;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.Label label18;
     }
 }

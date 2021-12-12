@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.LBUser = new System.Windows.Forms.Label();
             this.LBPass = new System.Windows.Forms.Label();
@@ -36,7 +37,11 @@
             this.BTLog = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LBSP = new System.Windows.Forms.Label();
+            this.ErrorProv2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrorProv1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv1)).BeginInit();
             this.SuspendLayout();
             // 
             // LBUser
@@ -82,6 +87,7 @@
             this.TXPass.PasswordChar = '*';
             this.TXPass.Size = new System.Drawing.Size(219, 28);
             this.TXPass.TabIndex = 3;
+            this.TXPass.TextChanged += new System.EventHandler(this.TXPass_TextChanged);
             // 
             // BTLog
             // 
@@ -89,7 +95,7 @@
             this.BTLog.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BTLog.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTLog.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BTLog.Location = new System.Drawing.Point(205, 333);
+            this.BTLog.Location = new System.Drawing.Point(212, 345);
             this.BTLog.Name = "BTLog";
             this.BTLog.Size = new System.Drawing.Size(156, 58);
             this.BTLog.TabIndex = 4;
@@ -120,6 +126,14 @@
             this.LBSP.TabIndex = 6;
             this.LBSP.Text = "SellPoint";
             // 
+            // ErrorProv2
+            // 
+            this.ErrorProv2.ContainerControl = this;
+            // 
+            // ErrorProv1
+            // 
+            this.ErrorProv1.ContainerControl = this;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -139,6 +153,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,5 +169,7 @@
         private System.Windows.Forms.Button BTLog;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label LBSP;
+        private System.Windows.Forms.ErrorProvider ErrorProv2;
+        private System.Windows.Forms.ErrorProvider ErrorProv1;
     }
 }
