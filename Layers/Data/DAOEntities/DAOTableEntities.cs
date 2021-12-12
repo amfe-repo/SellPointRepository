@@ -36,24 +36,24 @@ namespace Layers.Data.DAOEntities
                         DescriptionEntitie = (string)reader["Descripcion"],
                         DirecctionEntitie = (string)reader["Direccion"],
                         LocalityEntitie = (string)reader["Localidad"],
-                        TypeEntitieEntitie = (bool)reader["TipoEntidad"],
-                        DocumentNumberEntitie = (int)reader["TipoDocumento"],
+                        TypeEntitieEntitie = (string)reader["TipoEntidad"],
+                        TypeDocumentEntitie = (string)reader["TipoDocumento"],
+                        DocumentNumberEntitie = (int)reader["NumeroDocumento"],
                         PhoneEntitie = reader["Telefonos"].ToString(),
                         UrlWebEntitie = reader["UrlPaginaWeb"].ToString(),
                         UrlFacebookEntitie = reader["UrlFacebook"].ToString(),
                         UrlInstagramEntitie = reader["UrlInstagram"].ToString(),
-                        UrlTikTokEntitie = reader["UrlTwitter"].ToString(),
-                        UrlTwitterEntitie = reader["FechaRegistro"].ToString(),
-                        IdEntitieGroup = reader["FechaRegistro"].ToString(),
-                        IdTypeEntitie = reader["FechaRegistro"].ToString(),
-                        CrediteLimitEntitie = reader["FechaRegistro"].ToString(),
-                        UrlWebEntitie = reader["FechaRegistro"].ToString(),
-                        UserNameEntitie = reader["FechaRegistro"].ToString(),
-                        PasswordEntitie = reader["FechaRegistro"].ToString(),
-                        RoleUserEntitie = reader["FechaRegistro"].ToString(),
-                        ComentaryEntitie = reader["FechaRegistro"].ToString(),
-                        StatusEntitie = reader["FechaRegistro"].ToString(),
-                        IsDeletedEntitie = reader["FechaRegistro"].ToString(),
+                        UrlTwitterEntitie = reader["UrlTwitter"].ToString(),
+                        UrlTikTokEntitie = reader["UrlTikTok"].ToString(),
+                        IdEntitieGroup = int.Parse(reader["idGrupoEntidad"].ToString()),
+                        IdTypeEntitie = int.Parse(reader["idTipoEntidad"].ToString()),
+                        CrediteLimitEntitie = decimal.Parse(reader["LimiteCredito"].ToString()),
+                        UserNameEntitie = reader["UserNameEntidad"].ToString(),
+                        PasswordEntitie = reader["PasswordEntidad"].ToString(),
+                        RoleUserEntitie = reader["RoluserEntidad"].ToString(),
+                        ComentaryEntitie = reader["Comentario"].ToString(),
+                        StatusEntitie = reader["Estatus"].ToString(),
+                        IsDeletedEntitie = (bool)reader["NoEliminable"],
                         RegisterDateEntitie = reader["FechaRegistro"].ToString()
                     });
                 }
@@ -89,7 +89,7 @@ namespace Layers.Data.DAOEntities
                 command.Connection = connection;
                 command.CommandText = "INSERT INTO TiposEntidades(Descripcion, idGrupoEntidad, Comentario, Estatus, NoEliminable)" +
                     "VALUES(@desc, @idGroup, @com, @est, @elim)";
-                command.Parameters.AddWithValue("@desc", entitie.DescriptionTypeEntitie);
+                command.Parameters.AddWithValue("@desc", entitie.DescriptionEntitie);
                 command.Parameters.AddWithValue("@com", entitie.ComentaryTypeEntitie);
                 command.Parameters.AddWithValue("@est", entitie.StatusTypeEntitie);
                 command.Parameters.AddWithValue("@elim", entitie.IsDeletedTypeEntitie);

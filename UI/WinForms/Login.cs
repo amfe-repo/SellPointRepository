@@ -12,6 +12,8 @@ namespace UI.WinForms
 {
     public partial class Login : Form
     {
+        public static string user = "admin";
+        public static string password = "admin";
         public Login()
         {
             InitializeComponent();

@@ -132,5 +132,16 @@ namespace UI.WinForms
         {
             ED = null;
         }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+            LBS1.Text = "admin";
+            LB2.Text = DateTime.Now.ToString();
+        }
+
+        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
