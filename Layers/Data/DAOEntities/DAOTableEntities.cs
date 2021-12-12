@@ -84,12 +84,57 @@ namespace Layers.Data.DAOEntities
 
         public void InsertData(DTOEntities entitie)
         {
-            throw new NotImplementedException();
+            try
+            {
+                command.Connection = connection;
+                command.CommandText = "INSERT INTO TiposEntidades(Descripcion, idGrupoEntidad, Comentario, Estatus, NoEliminable)" +
+                    "VALUES(@desc, @idGroup, @com, @est, @elim)";
+                command.Parameters.AddWithValue("@desc", entitie.DescriptionTypeEntitie);
+                command.Parameters.AddWithValue("@com", entitie.ComentaryTypeEntitie);
+                command.Parameters.AddWithValue("@est", entitie.StatusTypeEntitie);
+                command.Parameters.AddWithValue("@elim", entitie.IsDeletedTypeEntitie);
+                command.Parameters.AddWithValue("@idGroup", entitie.IdEntitieGroup);
+                OpenConnection();
+
+                command.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                CloseConnection();
+            }
         }
 
         public void UpdateData(DTOEntities entitie)
         {
-            throw new NotImplementedException();
+            try
+            {
+                command.Connection = connection;
+                command.CommandText = "UPDATE TiposEntidades SET Descripcion = @desc, idGrupoEntidad = @idGroup, Comentario = @com, Estatus = @est, NoEliminable = @elim" +
+                    " WHERE idTipoEntidad = @id";
+                command.Parameters.AddWithValue("@desc", entitie.DescriptionTypeEntitie);
+                command.Parameters.AddWithValue("@com", entitie.ComentaryTypeEntitie);
+                command.Parameters.AddWithValue("@est", entitie.StatusTypeEntitie);
+                command.Parameters.AddWithValue("@elim", entitie.IsDeletedTypeEntitie);
+                command.Parameters.AddWithValue("@idGroup", entitie.IdEntitieGroup);
+                command.Parameters.AddWithValue("@id", entitie.IdTypeEntitie);
+                OpenConnection();
+
+                command.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                CloseConnection();
+            }
         }
     }
 }
