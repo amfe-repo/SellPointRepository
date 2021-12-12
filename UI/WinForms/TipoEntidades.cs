@@ -49,7 +49,7 @@ namespace UI.WinForms
         private void reload()
         {
             DAOTableEntitiesTypes dh = new DAOTableEntitiesTypes();
-            DAOTableEntitieType entitiesGroup = new DAOTableEntitieType();
+            DAOTableEntitiesGroup entitiesGroup = new DAOTableEntitiesGroup();
             
             DGV2.DataSource = dh.GetData();
             
@@ -93,7 +93,7 @@ namespace UI.WinForms
 
         private void BTNDel2_Click(object sender, EventArgs e)
         {
-            DAOTableEntitieType dh = new DAOTableEntitieType();
+            DAOTableEntitiesTypes dh = new DAOTableEntitiesTypes();
             dh.DeleteData(id);
             reload();
         }

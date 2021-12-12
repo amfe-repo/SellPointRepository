@@ -27,7 +27,7 @@ namespace UI.WinForms
 
         private void reload() 
         {
-            DAOTableEntitieType dh = new DAOTableEntitieType();
+            DAOTableEntitiesGroup dh = new DAOTableEntitiesGroup();
             dataGridView1.DataSource = dh.GetData();
         }
 
@@ -39,7 +39,7 @@ namespace UI.WinForms
             ent.StatusGroupEntitie = comboBox1.SelectedItem.ToString();
             ent.IsDeletedGroupEntitie = ChF.Checked;
 
-            DAOTableEntitieType dh = new DAOTableEntitieType();
+            DAOTableEntitiesGroup dh = new DAOTableEntitiesGroup();
             dh.InsertData(ent);
             reload();
         }
@@ -53,7 +53,7 @@ namespace UI.WinForms
             ent.IsDeletedGroupEntitie = ChF.Checked;
             ent.IdGroupEntitie = id;
 
-            DAOTableEntitieType dh = new DAOTableEntitieType();
+            DAOTableEntitiesGroup dh = new DAOTableEntitiesGroup();
             dh.UpdateData(ent);
             reload();
         }
@@ -69,7 +69,7 @@ namespace UI.WinForms
 
         private void BTNDel_Click(object sender, EventArgs e)
         {
-            DAOTableEntitieType dh = new DAOTableEntitieType();
+            DAOTableEntitiesGroup dh = new DAOTableEntitiesGroup();
             dh.DeleteData(id);
             reload();
         }
