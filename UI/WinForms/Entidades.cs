@@ -81,5 +81,18 @@ namespace UI.WinForms
                 ErrorProv5.Clear();
             }
         }
+
+        private void TXFace_TextChanged(object sender, EventArgs e)
+        {
+            if (TXFace.Text.Trim() == "")
+            {
+                ErrorProv7.SetError(TXFace, "Error, campo vacio");
+                TXFace.Focus();
+            }
+            else
+            {
+                ErrorProv7.Clear();
+            }
+        }
     }
 }

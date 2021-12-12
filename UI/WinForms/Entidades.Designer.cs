@@ -323,6 +323,7 @@ namespace UI.WinForms
             this.TXFace.Name = "TXFace";
             this.TXFace.Size = new System.Drawing.Size(172, 20);
             this.TXFace.TabIndex = 18;
+            this.TXFace.TextChanged += new System.EventHandler(this.TXFace_TextChanged);
             // 
             // label8
             // 
