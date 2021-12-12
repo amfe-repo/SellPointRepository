@@ -21,5 +21,13 @@ namespace UI.WinForms
         {
             
         }
+
+        private void TXUser_TextChanged(object sender, EventArgs e)
+        {
+            if (TXUser.Text.Trim() == "") 
+            {
+                
+            }
+        }
     }
 }

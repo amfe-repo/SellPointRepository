@@ -71,6 +71,7 @@
             this.TXUser.Name = "TXUser";
             this.TXUser.Size = new System.Drawing.Size(219, 28);
             this.TXUser.TabIndex = 2;
+            this.TXUser.TextChanged += new System.EventHandler(this.TXUser_TextChanged);
             // 
             // TXPass
             // 

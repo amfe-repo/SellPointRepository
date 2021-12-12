@@ -150,7 +150,7 @@ namespace UI.WinForms
             // 
             this.CBT.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CBT.FormattingEnabled = true;
-            this.CBT.Location = new System.Drawing.Point(177, 175);
+            this.CBT.Location = new System.Drawing.Point(174, 175);
             this.CBT.Name = "CBT";
             this.CBT.Size = new System.Drawing.Size(213, 24);
             this.CBT.TabIndex = 20;
