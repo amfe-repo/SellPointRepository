@@ -304,6 +304,7 @@ namespace UI.WinForms
             this.TXPageW.Name = "TXPageW";
             this.TXPageW.Size = new System.Drawing.Size(172, 20);
             this.TXPageW.TabIndex = 16;
+            this.TXPageW.TextChanged += new System.EventHandler(this.TXPageW_TextChanged);
             // 
             // label7
             // 
