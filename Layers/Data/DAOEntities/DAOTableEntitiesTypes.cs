@@ -31,12 +31,13 @@ namespace Layers.Data.DAOEntities
                 {
                     list.Add(new DTOEntitieTypes
                     {
-                       /* IdGroupEntitie = (int)reader["idGrupoEntidad"],
-                        DescriptionGroupEntitie = (string)reader["Descripcion"],
-                        ComentaryGroupEntitie = (string)reader["Comentario"],
-                        StatusGroupEntitie = (string)reader["Estatus"],
-                        IsDeletedGroupEntitie = (bool)reader["NoEliminable"],
-                        RegisterDateGroupEntitie = (string)reader["FechaRegistro"].ToString()*/
+                        IdTypeEntitie = (int)reader["idTipoEntidad"],
+                        DescriptionTypeEntitie = (string)reader["Descripcion"],
+                        IdEntitieGroup = (int)reader["idGrupoEntidad"],
+                        ComentaryTypeEntitie = (string)reader["Comentario"],
+                        StatusTypeEntitie = (string)reader["Estatus"],
+                        IsDeletedTypeEntitie = (bool)reader["NoEliminable"],
+                        RegisterDateTypeEntitie = reader["FechaRegistro"].ToString()
                     });
                 }
                 return list;
@@ -56,7 +57,43 @@ namespace Layers.Data.DAOEntities
 
         public List<DTOEntitieTypes> GetDataById(int id)
         {
-            throw new NotImplementedException();
+            SqlDataReader reader = null;
+            try
+            {
+                command.Connection = connection;
+                command.CommandText = "SELECT * FROM TiposEntidades WHERE @id";
+                command.Parameters.AddWithValue("@id", id);
+                OpenConnection();
+
+                reader = command.ExecuteReader();
+
+                List<DTOEntitieTypes> list = new List<DTOEntitieTypes>();
+                while (reader.Read())
+                {
+                    list.Add(new DTOEntitieTypes
+                    {
+                        IdTypeEntitie = (int)reader["idTipoEntidad"],
+                        DescriptionTypeEntitie = (string)reader["Descripcion"],
+                        IdEntitieGroup = (int)reader["idGrupoEntidad"],
+                        ComentaryTypeEntitie = (string)reader["Comentario"],
+                        StatusTypeEntitie = (string)reader["Estatus"],
+                        IsDeletedTypeEntitie = (bool)reader["NoEliminable"],
+                        RegisterDateTypeEntitie = reader["FechaRegistro"].ToString()
+                    });
+                }
+                return list;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                reader.Close();
+                CloseConnection();
+            }
+
+            return null;
         }
 
         public DTOEntitieTypes GetDataSpecify(string name, string password)
@@ -66,7 +103,29 @@ namespace Layers.Data.DAOEntities
 
         public void InsertData(DTOEntitieTypes entitie)
         {
-            throw new NotImplementedException();
+            try
+            {
+                command.Connection = connection;
+                command.CommandText = "INSERT INTO GruposEntidades(Descripcion, idGrupoEntidad, Comentario, Estatus, NoEliminable)" +
+                    "VALUES(@desc, @idGroup, @com, @est, @elim)";
+                command.Parameters.AddWithValue("@desc", entitie.DescriptionTypeEntitie);
+                command.Parameters.AddWithValue("@com", entitie.ComentaryTypeEntitie);
+                command.Parameters.AddWithValue("@est", entitie.StatusTypeEntitie);
+                command.Parameters.AddWithValue("@elim", entitie.IsDeletedTypeEntitie);
+                command.Parameters.AddWithValue("@idGroup", entitie.IdEntitieGroup);
+                OpenConnection();
+
+                command.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                CloseConnection();
+            }
         }
 
         public void UpdateData(DTOEntitieTypes entitie)
