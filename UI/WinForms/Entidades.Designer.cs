@@ -29,6 +29,7 @@ namespace UI.WinForms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Entidades));
             this.panel1 = new System.Windows.Forms.Panel();
             this.BTNDel3 = new System.Windows.Forms.Button();
@@ -77,9 +78,35 @@ namespace UI.WinForms
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
+            this.ErrorProv1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrorProv2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrorProv3 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrorProv4 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrorProv5 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrorProv6 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrorProv7 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrorProv8 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrorProv9 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrorProv10 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrorProv11 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrorProv12 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrorProv13 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv13)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -165,6 +192,7 @@ namespace UI.WinForms
             this.TXDescrp.Name = "TXDescrp";
             this.TXDescrp.Size = new System.Drawing.Size(172, 20);
             this.TXDescrp.TabIndex = 2;
+            this.TXDescrp.TextChanged += new System.EventHandler(this.TXDescrp_TextChanged);
             // 
             // TXDirecc
             // 
@@ -172,6 +200,7 @@ namespace UI.WinForms
             this.TXDirecc.Name = "TXDirecc";
             this.TXDirecc.Size = new System.Drawing.Size(172, 20);
             this.TXDirecc.TabIndex = 4;
+            this.TXDirecc.TextChanged += new System.EventHandler(this.TXDirecc_TextChanged);
             // 
             // label1
             // 
@@ -191,6 +220,7 @@ namespace UI.WinForms
             this.TXLoc.Name = "TXLoc";
             this.TXLoc.Size = new System.Drawing.Size(172, 20);
             this.TXLoc.TabIndex = 6;
+            this.TXLoc.TextChanged += new System.EventHandler(this.TXLoc_TextChanged);
             // 
             // label2
             // 
@@ -234,6 +264,7 @@ namespace UI.WinForms
             this.TXND.Name = "TXND";
             this.TXND.Size = new System.Drawing.Size(172, 20);
             this.TXND.TabIndex = 12;
+            this.TXND.TextChanged += new System.EventHandler(this.TXND_TextChanged);
             // 
             // label5
             // 
@@ -566,6 +597,58 @@ namespace UI.WinForms
             this.label18.TabIndex = 44;
             this.label18.Text = "TipoID";
             // 
+            // ErrorProv1
+            // 
+            this.ErrorProv1.ContainerControl = this;
+            // 
+            // ErrorProv2
+            // 
+            this.ErrorProv2.ContainerControl = this;
+            // 
+            // ErrorProv3
+            // 
+            this.ErrorProv3.ContainerControl = this;
+            // 
+            // ErrorProv4
+            // 
+            this.ErrorProv4.ContainerControl = this;
+            // 
+            // ErrorProv5
+            // 
+            this.ErrorProv5.ContainerControl = this;
+            // 
+            // ErrorProv6
+            // 
+            this.ErrorProv6.ContainerControl = this;
+            // 
+            // ErrorProv7
+            // 
+            this.ErrorProv7.ContainerControl = this;
+            // 
+            // ErrorProv8
+            // 
+            this.ErrorProv8.ContainerControl = this;
+            // 
+            // ErrorProv9
+            // 
+            this.ErrorProv9.ContainerControl = this;
+            // 
+            // ErrorProv10
+            // 
+            this.ErrorProv10.ContainerControl = this;
+            // 
+            // ErrorProv11
+            // 
+            this.ErrorProv11.ContainerControl = this;
+            // 
+            // ErrorProv12
+            // 
+            this.ErrorProv12.ContainerControl = this;
+            // 
+            // ErrorProv13
+            // 
+            this.ErrorProv13.ContainerControl = this;
+            // 
             // Entidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -623,6 +706,19 @@ namespace UI.WinForms
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv13)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -677,5 +773,18 @@ namespace UI.WinForms
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ErrorProvider ErrorProv1;
+        private System.Windows.Forms.ErrorProvider ErrorProv2;
+        private System.Windows.Forms.ErrorProvider ErrorProv3;
+        private System.Windows.Forms.ErrorProvider ErrorProv4;
+        private System.Windows.Forms.ErrorProvider ErrorProv5;
+        private System.Windows.Forms.ErrorProvider ErrorProv6;
+        private System.Windows.Forms.ErrorProvider ErrorProv7;
+        private System.Windows.Forms.ErrorProvider ErrorProv8;
+        private System.Windows.Forms.ErrorProvider ErrorProv9;
+        private System.Windows.Forms.ErrorProvider ErrorProv10;
+        private System.Windows.Forms.ErrorProvider ErrorProv11;
+        private System.Windows.Forms.ErrorProvider ErrorProv12;
+        private System.Windows.Forms.ErrorProvider ErrorProv13;
     }
 }
