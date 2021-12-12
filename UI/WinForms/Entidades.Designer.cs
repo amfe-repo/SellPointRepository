@@ -29,6 +29,7 @@ namespace UI.WinForms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Entidades));
             this.panel1 = new System.Windows.Forms.Panel();
             this.BTNDel3 = new System.Windows.Forms.Button();
@@ -42,8 +43,6 @@ namespace UI.WinForms
             this.TXLoc = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.TXTE = new System.Windows.Forms.TextBox();
-            this.TXTD = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.TXND = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -65,19 +64,51 @@ namespace UI.WinForms
             this.label13 = new System.Windows.Forms.Label();
             this.TXPassE = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.TXRUser = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.TXComent = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.TXStats = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ChF3 = new System.Windows.Forms.CheckBox();
             this.NoE = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.ErrorProv1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrorProv2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrorProv3 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrorProv4 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrorProv5 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrorProv6 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrorProv7 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrorProv8 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrorProv9 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrorProv10 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrorProv11 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrorProv12 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrorProv13 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.ErrorProv14 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv14)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -163,6 +194,7 @@ namespace UI.WinForms
             this.TXDescrp.Name = "TXDescrp";
             this.TXDescrp.Size = new System.Drawing.Size(172, 20);
             this.TXDescrp.TabIndex = 2;
+            this.TXDescrp.TextChanged += new System.EventHandler(this.TXDescrp_TextChanged);
             // 
             // TXDirecc
             // 
@@ -170,6 +202,7 @@ namespace UI.WinForms
             this.TXDirecc.Name = "TXDirecc";
             this.TXDirecc.Size = new System.Drawing.Size(172, 20);
             this.TXDirecc.TabIndex = 4;
+            this.TXDirecc.TextChanged += new System.EventHandler(this.TXDirecc_TextChanged);
             // 
             // label1
             // 
@@ -189,6 +222,7 @@ namespace UI.WinForms
             this.TXLoc.Name = "TXLoc";
             this.TXLoc.Size = new System.Drawing.Size(172, 20);
             this.TXLoc.TabIndex = 6;
+            this.TXLoc.TextChanged += new System.EventHandler(this.TXLoc_TextChanged);
             // 
             // label2
             // 
@@ -214,20 +248,6 @@ namespace UI.WinForms
             this.label3.TabIndex = 7;
             this.label3.Text = "TipoEntidad";
             // 
-            // TXTE
-            // 
-            this.TXTE.Location = new System.Drawing.Point(31, 318);
-            this.TXTE.Name = "TXTE";
-            this.TXTE.Size = new System.Drawing.Size(172, 20);
-            this.TXTE.TabIndex = 8;
-            // 
-            // TXTD
-            // 
-            this.TXTD.Location = new System.Drawing.Point(31, 368);
-            this.TXTD.Name = "TXTD";
-            this.TXTD.Size = new System.Drawing.Size(172, 20);
-            this.TXTD.TabIndex = 10;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -246,6 +266,7 @@ namespace UI.WinForms
             this.TXND.Name = "TXND";
             this.TXND.Size = new System.Drawing.Size(172, 20);
             this.TXND.TabIndex = 12;
+            this.TXND.TextChanged += new System.EventHandler(this.TXND_TextChanged);
             // 
             // label5
             // 
@@ -265,6 +286,7 @@ namespace UI.WinForms
             this.TXTel.Name = "TXTel";
             this.TXTel.Size = new System.Drawing.Size(172, 20);
             this.TXTel.TabIndex = 14;
+            this.TXTel.TextChanged += new System.EventHandler(this.TXTel_TextChanged);
             // 
             // label6
             // 
@@ -284,6 +306,7 @@ namespace UI.WinForms
             this.TXPageW.Name = "TXPageW";
             this.TXPageW.Size = new System.Drawing.Size(172, 20);
             this.TXPageW.TabIndex = 16;
+            this.TXPageW.TextChanged += new System.EventHandler(this.TXPageW_TextChanged);
             // 
             // label7
             // 
@@ -303,6 +326,7 @@ namespace UI.WinForms
             this.TXFace.Name = "TXFace";
             this.TXFace.Size = new System.Drawing.Size(172, 20);
             this.TXFace.TabIndex = 18;
+            this.TXFace.TextChanged += new System.EventHandler(this.TXFace_TextChanged);
             // 
             // label8
             // 
@@ -322,6 +346,7 @@ namespace UI.WinForms
             this.TXInsta.Name = "TXInsta";
             this.TXInsta.Size = new System.Drawing.Size(172, 20);
             this.TXInsta.TabIndex = 20;
+            this.TXInsta.TextChanged += new System.EventHandler(this.TXInsta_TextChanged);
             // 
             // label9
             // 
@@ -341,6 +366,7 @@ namespace UI.WinForms
             this.TXTwitter.Name = "TXTwitter";
             this.TXTwitter.Size = new System.Drawing.Size(172, 20);
             this.TXTwitter.TabIndex = 22;
+            this.TXTwitter.TextChanged += new System.EventHandler(this.TXTwitter_TextChanged);
             // 
             // label10
             // 
@@ -360,6 +386,7 @@ namespace UI.WinForms
             this.TXTiktok.Name = "TXTiktok";
             this.TXTiktok.Size = new System.Drawing.Size(172, 20);
             this.TXTiktok.TabIndex = 24;
+            this.TXTiktok.TextChanged += new System.EventHandler(this.TXTiktok_TextChanged);
             // 
             // label11
             // 
@@ -379,6 +406,7 @@ namespace UI.WinForms
             this.TXLimit.Name = "TXLimit";
             this.TXLimit.Size = new System.Drawing.Size(172, 20);
             this.TXLimit.TabIndex = 26;
+            this.TXLimit.TextChanged += new System.EventHandler(this.TXLimit_TextChanged);
             // 
             // label12
             // 
@@ -398,6 +426,7 @@ namespace UI.WinForms
             this.TXUserE.Name = "TXUserE";
             this.TXUserE.Size = new System.Drawing.Size(172, 20);
             this.TXUserE.TabIndex = 28;
+            this.TXUserE.TextChanged += new System.EventHandler(this.TXUserE_TextChanged);
             // 
             // label13
             // 
@@ -417,6 +446,7 @@ namespace UI.WinForms
             this.TXPassE.Name = "TXPassE";
             this.TXPassE.Size = new System.Drawing.Size(172, 20);
             this.TXPassE.TabIndex = 30;
+            this.TXPassE.TextChanged += new System.EventHandler(this.TXPassE_TextChanged);
             // 
             // label14
             // 
@@ -429,13 +459,6 @@ namespace UI.WinForms
             this.label14.Size = new System.Drawing.Size(125, 16);
             this.label14.TabIndex = 29;
             this.label14.Text = "PassworEntidad";
-            // 
-            // TXRUser
-            // 
-            this.TXRUser.Location = new System.Drawing.Point(461, 215);
-            this.TXRUser.Name = "TXRUser";
-            this.TXRUser.Size = new System.Drawing.Size(172, 20);
-            this.TXRUser.TabIndex = 32;
             // 
             // label15
             // 
@@ -455,6 +478,7 @@ namespace UI.WinForms
             this.TXComent.Name = "TXComent";
             this.TXComent.Size = new System.Drawing.Size(172, 20);
             this.TXComent.TabIndex = 34;
+            this.TXComent.TextChanged += new System.EventHandler(this.TXComent_TextChanged);
             // 
             // label16
             // 
@@ -467,13 +491,6 @@ namespace UI.WinForms
             this.label16.Size = new System.Drawing.Size(92, 16);
             this.label16.TabIndex = 33;
             this.label16.Text = "Comentario";
-            // 
-            // TXStats
-            // 
-            this.TXStats.Location = new System.Drawing.Point(461, 318);
-            this.TXStats.Name = "TXStats";
-            this.TXStats.Size = new System.Drawing.Size(172, 20);
-            this.TXStats.TabIndex = 36;
             // 
             // label17
             // 
@@ -530,6 +547,125 @@ namespace UI.WinForms
             this.dataGridView1.Size = new System.Drawing.Size(306, 391);
             this.dataGridView1.TabIndex = 39;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Física",
+            "Jurídica"});
+            this.comboBox1.Location = new System.Drawing.Point(29, 314);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(173, 21);
+            this.comboBox1.TabIndex = 40;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "RNC",
+            "Cédula",
+            "Pasaporte"});
+            this.comboBox2.Location = new System.Drawing.Point(31, 368);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(173, 21);
+            this.comboBox2.TabIndex = 41;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Admin\t",
+            "Supervisor",
+            "User"});
+            this.comboBox3.Location = new System.Drawing.Point(460, 215);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(173, 21);
+            this.comboBox3.TabIndex = 42;
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(460, 431);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(173, 21);
+            this.comboBox4.TabIndex = 43;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label18.Location = new System.Drawing.Point(515, 412);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(56, 16);
+            this.label18.TabIndex = 44;
+            this.label18.Text = "TipoID";
+            // 
+            // ErrorProv1
+            // 
+            this.ErrorProv1.ContainerControl = this;
+            // 
+            // ErrorProv2
+            // 
+            this.ErrorProv2.ContainerControl = this;
+            // 
+            // ErrorProv3
+            // 
+            this.ErrorProv3.ContainerControl = this;
+            // 
+            // ErrorProv4
+            // 
+            this.ErrorProv4.ContainerControl = this;
+            // 
+            // ErrorProv5
+            // 
+            this.ErrorProv5.ContainerControl = this;
+            // 
+            // ErrorProv6
+            // 
+            this.ErrorProv6.ContainerControl = this;
+            // 
+            // ErrorProv7
+            // 
+            this.ErrorProv7.ContainerControl = this;
+            // 
+            // ErrorProv8
+            // 
+            this.ErrorProv8.ContainerControl = this;
+            // 
+            // ErrorProv9
+            // 
+            this.ErrorProv9.ContainerControl = this;
+            // 
+            // ErrorProv10
+            // 
+            this.ErrorProv10.ContainerControl = this;
+            // 
+            // ErrorProv11
+            // 
+            this.ErrorProv11.ContainerControl = this;
+            // 
+            // ErrorProv12
+            // 
+            this.ErrorProv12.ContainerControl = this;
+            // 
+            // ErrorProv13
+            // 
+            this.ErrorProv13.ContainerControl = this;
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(461, 318);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(172, 21);
+            this.comboBox5.TabIndex = 45;
+            // 
+            // ErrorProv14
+            // 
+            this.ErrorProv14.ContainerControl = this;
+            // 
             // Entidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -537,14 +673,18 @@ namespace UI.WinForms
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(977, 555);
+            this.Controls.Add(this.comboBox5);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.NoE);
-            this.Controls.Add(this.TXStats);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.TXComent);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.TXRUser);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.TXPassE);
             this.Controls.Add(this.label14);
@@ -566,9 +706,7 @@ namespace UI.WinForms
             this.Controls.Add(this.label6);
             this.Controls.Add(this.TXND);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.TXTD);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.TXTE);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.TXLoc);
             this.Controls.Add(this.label2);
@@ -585,6 +723,20 @@ namespace UI.WinForms
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv14)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -604,8 +756,6 @@ namespace UI.WinForms
         private System.Windows.Forms.TextBox TXLoc;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox TXTE;
-        private System.Windows.Forms.TextBox TXTD;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox TXND;
         private System.Windows.Forms.Label label5;
@@ -627,15 +777,33 @@ namespace UI.WinForms
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox TXPassE;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox TXRUser;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox TXComent;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox TXStats;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.CheckBox ChF3;
         private System.Windows.Forms.Label NoE;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ErrorProvider ErrorProv1;
+        private System.Windows.Forms.ErrorProvider ErrorProv2;
+        private System.Windows.Forms.ErrorProvider ErrorProv3;
+        private System.Windows.Forms.ErrorProvider ErrorProv4;
+        private System.Windows.Forms.ErrorProvider ErrorProv5;
+        private System.Windows.Forms.ErrorProvider ErrorProv6;
+        private System.Windows.Forms.ErrorProvider ErrorProv7;
+        private System.Windows.Forms.ErrorProvider ErrorProv8;
+        private System.Windows.Forms.ErrorProvider ErrorProv9;
+        private System.Windows.Forms.ErrorProvider ErrorProv10;
+        private System.Windows.Forms.ErrorProvider ErrorProv11;
+        private System.Windows.Forms.ErrorProvider ErrorProv12;
+        private System.Windows.Forms.ErrorProvider ErrorProv13;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ErrorProvider ErrorProv14;
     }
 }
