@@ -67,7 +67,6 @@ namespace UI.WinForms
             this.label15 = new System.Windows.Forms.Label();
             this.TXComent = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.TXStats = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ChF3 = new System.Windows.Forms.CheckBox();
@@ -91,6 +90,8 @@ namespace UI.WinForms
             this.ErrorProv11 = new System.Windows.Forms.ErrorProvider(this.components);
             this.ErrorProv12 = new System.Windows.Forms.ErrorProvider(this.components);
             this.ErrorProv13 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.ErrorProv14 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -107,6 +108,7 @@ namespace UI.WinForms
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProv11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProv12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProv13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv14)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -344,6 +346,7 @@ namespace UI.WinForms
             this.TXInsta.Name = "TXInsta";
             this.TXInsta.Size = new System.Drawing.Size(172, 20);
             this.TXInsta.TabIndex = 20;
+            this.TXInsta.TextChanged += new System.EventHandler(this.TXInsta_TextChanged);
             // 
             // label9
             // 
@@ -363,6 +366,7 @@ namespace UI.WinForms
             this.TXTwitter.Name = "TXTwitter";
             this.TXTwitter.Size = new System.Drawing.Size(172, 20);
             this.TXTwitter.TabIndex = 22;
+            this.TXTwitter.TextChanged += new System.EventHandler(this.TXTwitter_TextChanged);
             // 
             // label10
             // 
@@ -382,6 +386,7 @@ namespace UI.WinForms
             this.TXTiktok.Name = "TXTiktok";
             this.TXTiktok.Size = new System.Drawing.Size(172, 20);
             this.TXTiktok.TabIndex = 24;
+            this.TXTiktok.TextChanged += new System.EventHandler(this.TXTiktok_TextChanged);
             // 
             // label11
             // 
@@ -401,6 +406,7 @@ namespace UI.WinForms
             this.TXLimit.Name = "TXLimit";
             this.TXLimit.Size = new System.Drawing.Size(172, 20);
             this.TXLimit.TabIndex = 26;
+            this.TXLimit.TextChanged += new System.EventHandler(this.TXLimit_TextChanged);
             // 
             // label12
             // 
@@ -420,6 +426,7 @@ namespace UI.WinForms
             this.TXUserE.Name = "TXUserE";
             this.TXUserE.Size = new System.Drawing.Size(172, 20);
             this.TXUserE.TabIndex = 28;
+            this.TXUserE.TextChanged += new System.EventHandler(this.TXUserE_TextChanged);
             // 
             // label13
             // 
@@ -439,6 +446,7 @@ namespace UI.WinForms
             this.TXPassE.Name = "TXPassE";
             this.TXPassE.Size = new System.Drawing.Size(172, 20);
             this.TXPassE.TabIndex = 30;
+            this.TXPassE.TextChanged += new System.EventHandler(this.TXPassE_TextChanged);
             // 
             // label14
             // 
@@ -470,6 +478,7 @@ namespace UI.WinForms
             this.TXComent.Name = "TXComent";
             this.TXComent.Size = new System.Drawing.Size(172, 20);
             this.TXComent.TabIndex = 34;
+            this.TXComent.TextChanged += new System.EventHandler(this.TXComent_TextChanged);
             // 
             // label16
             // 
@@ -482,13 +491,6 @@ namespace UI.WinForms
             this.label16.Size = new System.Drawing.Size(92, 16);
             this.label16.TabIndex = 33;
             this.label16.Text = "Comentario";
-            // 
-            // TXStats
-            // 
-            this.TXStats.Location = new System.Drawing.Point(461, 318);
-            this.TXStats.Name = "TXStats";
-            this.TXStats.Size = new System.Drawing.Size(172, 20);
-            this.TXStats.TabIndex = 36;
             // 
             // label17
             // 
@@ -652,6 +654,18 @@ namespace UI.WinForms
             // 
             this.ErrorProv13.ContainerControl = this;
             // 
+            // comboBox5
+            // 
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(461, 318);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(172, 21);
+            this.comboBox5.TabIndex = 45;
+            // 
+            // ErrorProv14
+            // 
+            this.ErrorProv14.ContainerControl = this;
+            // 
             // Entidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -659,6 +673,7 @@ namespace UI.WinForms
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(977, 555);
+            this.Controls.Add(this.comboBox5);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.comboBox3);
@@ -667,7 +682,6 @@ namespace UI.WinForms
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.NoE);
-            this.Controls.Add(this.TXStats);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.TXComent);
             this.Controls.Add(this.label16);
@@ -722,6 +736,7 @@ namespace UI.WinForms
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProv11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProv12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProv13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProv14)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -765,7 +780,6 @@ namespace UI.WinForms
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox TXComent;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox TXStats;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.CheckBox ChF3;
@@ -789,5 +803,7 @@ namespace UI.WinForms
         private System.Windows.Forms.ErrorProvider ErrorProv11;
         private System.Windows.Forms.ErrorProvider ErrorProv12;
         private System.Windows.Forms.ErrorProvider ErrorProv13;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ErrorProvider ErrorProv14;
     }
 }

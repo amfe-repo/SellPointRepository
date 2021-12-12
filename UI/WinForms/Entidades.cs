@@ -107,5 +107,99 @@ namespace UI.WinForms
                 ErrorProv6.Clear();
             }
         }
+
+        private void TXInsta_TextChanged(object sender, EventArgs e)
+        {
+            if (TXInsta.Text.Trim() == "")
+            {
+                ErrorProv8.SetError(TXInsta, "Error, campo vacio");
+                TXInsta.Focus();
+            }
+            else
+            {
+                ErrorProv8.Clear();
+            }
+        }
+
+        private void TXTwitter_TextChanged(object sender, EventArgs e)
+        {
+            if (TXTwitter.Text.Trim() == "")
+            {
+                ErrorProv9.SetError(TXTwitter, "Error, campo vacio");
+                TXTwitter.Focus();
+            }
+            else
+            {
+                ErrorProv9.Clear();
+            }
+        }
+
+        private void TXTiktok_TextChanged(object sender, EventArgs e)
+        {
+            if (TXTiktok.Text.Trim() == "")
+            {
+                ErrorProv10.SetError(TXTiktok, "Error, campo vacio");
+                TXTiktok.Focus();
+            }
+            else
+            {
+                ErrorProv10.Clear();
+            }
+        }
+
+        private void TXLimit_TextChanged(object sender, EventArgs e)
+        {
+            if (TXLimit.Text.Trim() == "")
+            {
+                ErrorProv11.SetError(TXLimit, "Error, campo vacio");
+                TXLimit.Focus();
+            }
+            else
+            {
+                ErrorProv11.Clear();
+            }
+        }
+
+        private void TXUserE_TextChanged(object sender, EventArgs e)
+        {
+            if (TXUserE.Text.Trim() == "")
+            {
+                ErrorProv12.SetError(TXUserE, "Error, campo vacio");
+                TXUserE.Focus();
+            }
+            else
+            {
+                ErrorProv12.Clear();
+            }
+        }
+
+        private void TXPassE_TextChanged(object sender, EventArgs e)
+        {
+            if (TXPassE.Text.Trim() == "")
+            {
+                ErrorProv13.SetError(TXPassE, "Error, campo vacio");
+                TXPassE.Focus();
+            }
+            else
+            {
+                ErrorProv13.Clear();
+            }
+        }
+
+        private void TXComent_TextChanged(object sender, EventArgs e)
+        {
+            if (TXComent.Text.Trim() == "")
+            {
+                ErrorProv14.SetError(TXComent, "Error, campo vacio");
+                TXComent.Focus();
+            }
+            else
+            {
+                ErrorProv14.Clear();
+            }
+        }
     }
+    
 }
+
+
