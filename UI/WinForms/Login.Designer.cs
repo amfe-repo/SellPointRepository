@@ -35,6 +35,7 @@
             this.TXPass = new System.Windows.Forms.TextBox();
             this.BTLog = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.LBSP = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,12 +107,25 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
+            // LBSP
+            // 
+            this.LBSP.AutoSize = true;
+            this.LBSP.BackColor = System.Drawing.Color.Transparent;
+            this.LBSP.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBSP.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.LBSP.Location = new System.Drawing.Point(248, 145);
+            this.LBSP.Name = "LBSP";
+            this.LBSP.Size = new System.Drawing.Size(73, 16);
+            this.LBSP.TabIndex = 6;
+            this.LBSP.Text = "SellPoint";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(566, 453);
+            this.Controls.Add(this.LBSP);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BTLog);
             this.Controls.Add(this.TXPass);
@@ -137,5 +151,6 @@
         private System.Windows.Forms.TextBox TXPass;
         private System.Windows.Forms.Button BTLog;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label LBSP;
     }
 }
