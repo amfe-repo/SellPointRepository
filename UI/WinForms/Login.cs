@@ -21,7 +21,7 @@ namespace UI.WinForms
 
         private void BTLog_Click(object sender, EventArgs e)
         {
-            
+            this.Close();
         }
 
         private void TXUser_TextChanged(object sender, EventArgs e)
