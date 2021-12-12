@@ -74,7 +74,7 @@ namespace UI.WinForms
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tipoEntidad = new System.Windows.Forms.ComboBox();
             this.tipoDocumento = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cmbUserRole = new System.Windows.Forms.ComboBox();
             this.tipoIdEntidad = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
             this.ErrorProv1 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -90,7 +90,7 @@ namespace UI.WinForms
             this.ErrorProv11 = new System.Windows.Forms.ErrorProvider(this.components);
             this.ErrorProv12 = new System.Windows.Forms.ErrorProvider(this.components);
             this.ErrorProv13 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.ErrorProv14 = new System.Windows.Forms.ErrorProvider(this.components);
             this.label19 = new System.Windows.Forms.Label();
             this.tipoIdGrupo = new System.Windows.Forms.ComboBox();
@@ -164,6 +164,7 @@ namespace UI.WinForms
             this.BTNRefre3.TabIndex = 5;
             this.BTNRefre3.Text = "Modificar";
             this.BTNRefre3.UseVisualStyleBackColor = true;
+            this.BTNRefre3.Click += new System.EventHandler(this.BTNRefre3_Click);
             // 
             // BTAdd3
             // 
@@ -177,6 +178,7 @@ namespace UI.WinForms
             this.BTAdd3.TabIndex = 4;
             this.BTAdd3.Text = "Agregar";
             this.BTAdd3.UseVisualStyleBackColor = true;
+            this.BTAdd3.Click += new System.EventHandler(this.BTAdd3_Click);
             // 
             // LBDescr
             // 
@@ -553,8 +555,8 @@ namespace UI.WinForms
             // 
             this.tipoEntidad.FormattingEnabled = true;
             this.tipoEntidad.Items.AddRange(new object[] {
-            "Física",
-            "Jurídica"});
+            "Fisica",
+            "Juridica"});
             this.tipoEntidad.Location = new System.Drawing.Point(29, 314);
             this.tipoEntidad.Name = "tipoEntidad";
             this.tipoEntidad.Size = new System.Drawing.Size(173, 21);
@@ -565,24 +567,24 @@ namespace UI.WinForms
             this.tipoDocumento.FormattingEnabled = true;
             this.tipoDocumento.Items.AddRange(new object[] {
             "RNC",
-            "Cédula",
+            "Cedula",
             "Pasaporte"});
             this.tipoDocumento.Location = new System.Drawing.Point(31, 368);
             this.tipoDocumento.Name = "tipoDocumento";
             this.tipoDocumento.Size = new System.Drawing.Size(173, 21);
             this.tipoDocumento.TabIndex = 41;
             // 
-            // comboBox3
+            // cmbUserRole
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.cmbUserRole.FormattingEnabled = true;
+            this.cmbUserRole.Items.AddRange(new object[] {
             "Admin\t",
             "Supervisor",
             "User"});
-            this.comboBox3.Location = new System.Drawing.Point(460, 215);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(173, 21);
-            this.comboBox3.TabIndex = 42;
+            this.cmbUserRole.Location = new System.Drawing.Point(460, 215);
+            this.cmbUserRole.Name = "cmbUserRole";
+            this.cmbUserRole.Size = new System.Drawing.Size(173, 21);
+            this.cmbUserRole.TabIndex = 42;
             // 
             // tipoIdEntidad
             // 
@@ -656,13 +658,16 @@ namespace UI.WinForms
             // 
             this.ErrorProv13.ContainerControl = this;
             // 
-            // comboBox5
+            // cmbStatus
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(461, 318);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(172, 21);
-            this.comboBox5.TabIndex = 45;
+            this.cmbStatus.FormattingEnabled = true;
+            this.cmbStatus.Items.AddRange(new object[] {
+            "Activa",
+            "Inactiva"});
+            this.cmbStatus.Location = new System.Drawing.Point(461, 318);
+            this.cmbStatus.Name = "cmbStatus";
+            this.cmbStatus.Size = new System.Drawing.Size(172, 21);
+            this.cmbStatus.TabIndex = 45;
             // 
             // ErrorProv14
             // 
@@ -697,10 +702,10 @@ namespace UI.WinForms
             this.ClientSize = new System.Drawing.Size(977, 555);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.tipoIdGrupo);
-            this.Controls.Add(this.comboBox5);
+            this.Controls.Add(this.cmbStatus);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.tipoIdEntidad);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.cmbUserRole);
             this.Controls.Add(this.tipoDocumento);
             this.Controls.Add(this.tipoEntidad);
             this.Controls.Add(this.dataGridView1);
@@ -812,7 +817,7 @@ namespace UI.WinForms
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox tipoEntidad;
         private System.Windows.Forms.ComboBox tipoDocumento;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cmbUserRole;
         private System.Windows.Forms.ComboBox tipoIdEntidad;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ErrorProvider ErrorProv1;
@@ -828,7 +833,7 @@ namespace UI.WinForms
         private System.Windows.Forms.ErrorProvider ErrorProv11;
         private System.Windows.Forms.ErrorProvider ErrorProv12;
         private System.Windows.Forms.ErrorProvider ErrorProv13;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.ErrorProvider ErrorProv14;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.ComboBox tipoIdGrupo;

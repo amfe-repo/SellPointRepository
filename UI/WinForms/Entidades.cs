@@ -14,6 +14,7 @@ namespace UI.WinForms
 {
     public partial class Entidades : Form
     {
+        public int id = 0;
         public Entidades()
         {
             InitializeComponent();
@@ -208,13 +209,18 @@ namespace UI.WinForms
 
             dataGridView1.DataSource = dh.GetData();
 
-            /*CBT.Items.Clear();
+            tipoIdEntidad.Items.Clear();
+            tipoIdGrupo.Items.Clear();
 
             foreach (DTOEntitiesGroup t in entitiesGroup.GetData())
             {
-                CBT.Items.Add(t.IdGroupEntitie);
+                tipoIdGrupo.Items.Add(t.IdGroupEntitie);
             }
-            */
+
+            foreach (DTOEntitieTypes t in entitiesType.GetData())
+            {
+                tipoIdEntidad.Items.Add(t.IdTypeEntitie);
+            }
         }
 
         private void Entidades_Load(object sender, EventArgs e)
@@ -222,6 +228,67 @@ namespace UI.WinForms
             reload();
         }
 
+        private void BTAdd3_Click(object sender, EventArgs e)
+        {
+            DTOEntities ent = new DTOEntities();
+
+            ent.DescriptionEntitie = TXDescrp.Text;
+            ent.DirecctionEntitie = TXDirecc.Text;
+            ent.LocalityEntitie = TXLoc.Text;
+            ent.TypeEntitieEntitie = tipoEntidad.Text;
+            ent.TypeDocumentEntitie = tipoDocumento.Text;
+            ent.DocumentNumberEntitie = decimal.Parse(txtNoDocument.Text);
+            ent.PhoneEntitie = txtTel.Text;
+            ent.UrlWebEntitie = TXPageW.Text;
+            ent.UrlFacebookEntitie = TXFace.Text;
+            ent.UrlInstagramEntitie = TXInsta.Text;
+            ent.UrlTikTokEntitie = TXTiktok.Text;
+            ent.UrlTwitterEntitie = TXTwitter.Text;
+            ent.IdTypeEntitie = int.Parse(tipoIdEntidad.SelectedItem.ToString());
+            ent.IdEntitieGroup = int.Parse(tipoIdGrupo.SelectedItem.ToString());
+            ent.CrediteLimitEntitie = decimal.Parse(TXLimit.Text);
+            ent.UserNameEntitie = TXUserE.Text;
+            ent.PasswordEntitie = TXPassE.Text;
+            ent.RoleUserEntitie = cmbUserRole.SelectedItem.ToString();
+            ent.ComentaryEntitie = TXComent.Text;
+            ent.StatusEntitie = cmbStatus.SelectedItem.ToString();
+            ent.IsDeletedEntitie = ChF3.Checked;
+
+
+            DAOTableEntities dh = new DAOTableEntities();
+            dh.InsertData(ent);
+            reload();
+        }
+
+        private void BTNRefre3_Click(object sender, EventArgs e)
+        {
+            DTOEntities ent = new DTOEntities();
+            ent.DescriptionEntitie = TXDescrp.Text;
+            ent.DirecctionEntitie = TXDirecc.Text;
+            ent.LocalityEntitie = TXLoc.Text;
+            ent.TypeEntitieEntitie = tipoEntidad.Text;
+            ent.TypeDocumentEntitie = tipoDocumento.Text;
+            ent.DocumentNumberEntitie = decimal.Parse(txtNoDocument.Text);
+            ent.PhoneEntitie = txtTel.Text;
+            ent.UrlWebEntitie = TXPageW.Text;
+            ent.UrlFacebookEntitie = TXFace.Text;
+            ent.UrlInstagramEntitie = TXInsta.Text;
+            ent.UrlTikTokEntitie = TXTiktok.Text;
+            ent.UrlTwitterEntitie = TXTwitter.Text;
+            ent.IdTypeEntitie = int.Parse(tipoIdEntidad.SelectedItem.ToString());
+            ent.IdEntitieGroup = int.Parse(tipoIdGrupo.SelectedItem.ToString());
+            ent.CrediteLimitEntitie = decimal.Parse(TXLimit.Text);
+            ent.UserNameEntitie = TXUserE.Text;
+            ent.PasswordEntitie = TXPassE.Text;
+            ent.RoleUserEntitie = cmbUserRole.SelectedItem.ToString();
+            ent.ComentaryEntitie = TXComent.Text;
+            ent.StatusEntitie = cmbStatus.SelectedItem.ToString();
+            ent.IsDeletedEntitie = ChF3.Checked;
+
+            DAOTableEntities dh = new DAOTableEntities();
+            dh.UpdateData(ent);
+            reload();
+        }
     }
     
 }
