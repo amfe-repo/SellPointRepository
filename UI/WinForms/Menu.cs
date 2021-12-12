@@ -16,6 +16,7 @@ namespace UI.WinForms
         private TipoEntidades TE;
         private AcercaDe AcerDe;
         private Login LG;
+        private Entidades ED;
         public Menu()
         {
             InitializeComponent();
@@ -110,6 +111,26 @@ namespace UI.WinForms
         private void Exit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Ent_Click(object sender, EventArgs e)
+        {
+            if (ED == null)
+            {
+                ED = new Entidades();
+                ED.MdiParent = this;
+                ED.FormClosed += new FormClosedEventHandler(CerrarED);
+                ED.Show();
+            }
+            else
+            {
+                LG.Activate();
+            }
+        }
+
+        private void CerrarED(object sender, FormClosedEventArgs e)
+        {
+            ED = null;
         }
     }
 }

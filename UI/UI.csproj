@@ -55,6 +55,12 @@
     <Compile Include="WinForms\AcercaDe.Designer.cs">
       <DependentUpon>AcercaDe.cs</DependentUpon>
     </Compile>
+    <Compile Include="WinForms\Entidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\Entidades.Designer.cs">
+      <DependentUpon>Entidades.cs</DependentUpon>
+    </Compile>
     <Compile Include="WinForms\GrupoEntidades.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     </Compile>
     <EmbeddedResource Include="WinForms\AcercaDe.resx">
       <DependentUpon>AcercaDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\Entidades.resx">
+      <DependentUpon>Entidades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WinForms\GrupoEntidades.resx">
       <DependentUpon>GrupoEntidades.cs</DependentUpon>
