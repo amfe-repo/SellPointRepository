@@ -87,13 +87,22 @@ namespace Layers.Data.DAOEntities
             try
             {
                 command.Connection = connection;
-                command.CommandText = "INSERT INTO TiposEntidades(Descripcion, idGrupoEntidad, Comentario, Estatus, NoEliminable)" +
-                    "VALUES(@desc, @idGroup, @com, @est, @elim)";
+                command.CommandText = "INSERT INTO Entidades(idEntidad, Descripcion, Direccion, Localidad, TipoEntidad, TipoDocumento, NumeroDocumento, Telefonos, URLPaginaWeb, URLFacebook, URLInstagram, URLTikTok, idGrupoEntidad, idTipoEntidad, LimiteCredito, UserNameEntidad, RolUserEntidad, Comentario, Estatus, NoEliminable, FechaRegistro)" +
+                    "VALUES(@idE, @desc, @direcc, @Local, @TipE, @TipoD, @NumeroD, @Tel, @URLP, @URLFace, @URLInst, @Twitt, @URLTik, @idGroup, @idTipoE, @LimiteC, @UserNE, @PassE, @RolUE @com, @est, @elim, @FechaReg)";
+                command.Parameters.AddWithValue("@idE", entitie.IdEntitie);
                 command.Parameters.AddWithValue("@desc", entitie.DescriptionEntitie);
-                command.Parameters.AddWithValue("@com", entitie.ComentaryTypeEntitie);
-                command.Parameters.AddWithValue("@est", entitie.StatusTypeEntitie);
-                command.Parameters.AddWithValue("@elim", entitie.IsDeletedTypeEntitie);
-                command.Parameters.AddWithValue("@idGroup", entitie.IdEntitieGroup);
+                command.Parameters.AddWithValue("@direcc", entitie.DirecctionEntitie);
+                command.Parameters.AddWithValue("@Local", entitie.LocalityEntitie);
+                command.Parameters.AddWithValue("@TipE", entitie.TypeEntitieEntitie);
+                command.Parameters.AddWithValue("@TipoD", entitie.TypeDocumentEntitie);
+                command.Parameters.AddWithValue("@NumeroD", entitie.DocumentNumberEntitie);
+                command.Parameters.AddWithValue("@Tel", entitie.PhoneEntitie);
+                command.Parameters.AddWithValue("@URLP", entitie.UrlWebEntitie);
+                command.Parameters.AddWithValue("@URLFace", entitie.UrlFacebookEntitie);
+                //command.Parameters.AddWithValue("@com", entitie.ComentaryTypeEntitie);
+                //command.Parameters.AddWithValue("@est", entitie.StatusTypeEntitie);
+                //command.Parameters.AddWithValue("@elim", entitie.IsDeletedTypeEntitie);
+                //command.Parameters.AddWithValue("@idGroup", entitie.IdEntitieGroup);
                 OpenConnection();
 
                 command.ExecuteNonQuery();
