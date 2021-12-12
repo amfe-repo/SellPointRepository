@@ -33,7 +33,6 @@ namespace UI.WinForms
             this.panel2 = new System.Windows.Forms.Panel();
             this.ChF2 = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.TXEsta2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.TXComen2 = new System.Windows.Forms.TextBox();
@@ -46,6 +45,7 @@ namespace UI.WinForms
             this.BTNRefre2 = new System.Windows.Forms.Button();
             this.BTAdd2 = new System.Windows.Forms.Button();
             this.DGV2 = new System.Windows.Forms.DataGridView();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.PN2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV2)).BeginInit();
@@ -69,7 +69,7 @@ namespace UI.WinForms
             this.ChF2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.ChF2.Location = new System.Drawing.Point(61, 3);
             this.ChF2.Name = "ChF2";
-            this.ChF2.Size = new System.Drawing.Size(66, 20);
+            this.ChF2.Size = new System.Drawing.Size(65, 20);
             this.ChF2.TabIndex = 9;
             this.ChF2.Text = "Falso";
             this.ChF2.UseVisualStyleBackColor = false;
@@ -82,17 +82,9 @@ namespace UI.WinForms
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(349, 105);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 16);
+            this.label3.Size = new System.Drawing.Size(99, 16);
             this.label3.TabIndex = 18;
             this.label3.Text = "NoEliminable";
-            // 
-            // TXEsta2
-            // 
-            this.TXEsta2.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXEsta2.Location = new System.Drawing.Point(54, 122);
-            this.TXEsta2.Name = "TXEsta2";
-            this.TXEsta2.Size = new System.Drawing.Size(187, 22);
-            this.TXEsta2.TabIndex = 17;
             // 
             // label2
             // 
@@ -102,7 +94,7 @@ namespace UI.WinForms
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(111, 103);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 16);
+            this.label2.Size = new System.Drawing.Size(64, 16);
             this.label2.TabIndex = 16;
             this.label2.Text = "Estatus";
             // 
@@ -114,7 +106,7 @@ namespace UI.WinForms
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(349, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 16);
+            this.label1.Size = new System.Drawing.Size(91, 16);
             this.label1.TabIndex = 15;
             this.label1.Text = "Comentario";
             // 
@@ -142,7 +134,7 @@ namespace UI.WinForms
             this.LBDesc.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.LBDesc.Location = new System.Drawing.Point(95, 43);
             this.LBDesc.Name = "LBDesc";
-            this.LBDesc.Size = new System.Drawing.Size(94, 16);
+            this.LBDesc.Size = new System.Drawing.Size(93, 16);
             this.LBDesc.TabIndex = 12;
             this.LBDesc.Text = "Descripcion";
             // 
@@ -180,6 +172,7 @@ namespace UI.WinForms
             this.BTNDel2.TabIndex = 3;
             this.BTNDel2.Text = "Borrar";
             this.BTNDel2.UseVisualStyleBackColor = true;
+            this.BTNDel2.Click += new System.EventHandler(this.BTNDel2_Click);
             // 
             // BTNSearch2
             // 
@@ -206,6 +199,7 @@ namespace UI.WinForms
             this.BTNRefre2.TabIndex = 1;
             this.BTNRefre2.Text = "Modificar";
             this.BTNRefre2.UseVisualStyleBackColor = true;
+            this.BTNRefre2.Click += new System.EventHandler(this.BTNRefre2_Click);
             // 
             // BTAdd2
             // 
@@ -219,6 +213,7 @@ namespace UI.WinForms
             this.BTAdd2.TabIndex = 0;
             this.BTAdd2.Text = "Agregar";
             this.BTAdd2.UseVisualStyleBackColor = true;
+            this.BTAdd2.Click += new System.EventHandler(this.BTAdd2_Click);
             // 
             // DGV2
             // 
@@ -227,6 +222,18 @@ namespace UI.WinForms
             this.DGV2.Name = "DGV2";
             this.DGV2.Size = new System.Drawing.Size(503, 168);
             this.DGV2.TabIndex = 22;
+            this.DGV2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV2_CellClick);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Activa",
+            "Inactiva"});
+            this.comboBox1.Location = new System.Drawing.Point(54, 128);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(187, 21);
+            this.comboBox1.TabIndex = 23;
             // 
             // TipoEntidades
             // 
@@ -235,12 +242,12 @@ namespace UI.WinForms
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 435);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.DGV2);
             this.Controls.Add(this.PN2);
             this.Controls.Add(this.CBT);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.TXEsta2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TXComen2);
@@ -250,6 +257,7 @@ namespace UI.WinForms
             this.Name = "TipoEntidades";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TipoEntidades";
+            this.Load += new System.EventHandler(this.TipoEntidades_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.PN2.ResumeLayout(false);
@@ -264,7 +272,6 @@ namespace UI.WinForms
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.CheckBox ChF2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox TXEsta2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TXComen2;
@@ -277,5 +284,6 @@ namespace UI.WinForms
         private System.Windows.Forms.Button BTNRefre2;
         private System.Windows.Forms.Button BTAdd2;
         private System.Windows.Forms.DataGridView DGV2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

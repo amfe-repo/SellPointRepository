@@ -15,6 +15,5 @@ namespace Layers.Data.DTOStructData
         public string StatusTypeEntitie { get; set; }
         public bool IsDeletedTypeEntitie { get; set; }
         public string RegisterDateTypeEntitie { get; set; }
-
     }
 }

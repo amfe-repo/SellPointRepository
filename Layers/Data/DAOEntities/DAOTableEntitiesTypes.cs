@@ -12,7 +12,24 @@ namespace Layers.Data.DAOEntities
     {
         public void DeleteData(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                command.Connection = connection;
+                command.CommandText = "DELETE FROM TiposEntidades" +
+                    " WHERE idTipoEntidad = @id";
+                command.Parameters.AddWithValue("@id", id);
+
+                command.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                CloseConnection();
+            }
         }
 
         public List<DTOEntitieTypes> GetData()
@@ -27,16 +44,17 @@ namespace Layers.Data.DAOEntities
                 reader = command.ExecuteReader();
 
                 List<DTOEntitieTypes> list = new List<DTOEntitieTypes>();
+
                 while (reader.Read())
                 {
                     list.Add(new DTOEntitieTypes
                     {
                         IdTypeEntitie = (int)reader["idTipoEntidad"],
                         DescriptionTypeEntitie = (string)reader["Descripcion"],
-                        IdEntitieGroup = (int)reader["idGrupoEntidad"],
                         ComentaryTypeEntitie = (string)reader["Comentario"],
                         StatusTypeEntitie = (string)reader["Estatus"],
                         IsDeletedTypeEntitie = (bool)reader["NoEliminable"],
+                        IdEntitieGroup = (int)reader["idGrupoEntidad"],
                         RegisterDateTypeEntitie = reader["FechaRegistro"].ToString()
                     });
                 }
@@ -106,7 +124,7 @@ namespace Layers.Data.DAOEntities
             try
             {
                 command.Connection = connection;
-                command.CommandText = "INSERT INTO GruposEntidades(Descripcion, idGrupoEntidad, Comentario, Estatus, NoEliminable)" +
+                command.CommandText = "INSERT INTO TiposEntidades(Descripcion, idGrupoEntidad, Comentario, Estatus, NoEliminable)" +
                     "VALUES(@desc, @idGroup, @com, @est, @elim)";
                 command.Parameters.AddWithValue("@desc", entitie.DescriptionTypeEntitie);
                 command.Parameters.AddWithValue("@com", entitie.ComentaryTypeEntitie);
@@ -130,7 +148,30 @@ namespace Layers.Data.DAOEntities
 
         public void UpdateData(DTOEntitieTypes entitie)
         {
-            throw new NotImplementedException();
+            try
+            {
+                command.Connection = connection;
+                command.CommandText = "UPDATE TiposEntidades SET Descripcion = @desc, idGrupoEntidad = @idGroup, Comentario = @com, Estatus = @est, NoEliminable = @elim" +
+                    " WHERE idTipoEntidad = @id";
+                command.Parameters.AddWithValue("@desc", entitie.DescriptionTypeEntitie);
+                command.Parameters.AddWithValue("@com", entitie.ComentaryTypeEntitie);
+                command.Parameters.AddWithValue("@est", entitie.StatusTypeEntitie);
+                command.Parameters.AddWithValue("@elim", entitie.IsDeletedTypeEntitie);
+                command.Parameters.AddWithValue("@idGroup", entitie.IdEntitieGroup);
+                command.Parameters.AddWithValue("@id", entitie.IdTypeEntitie);
+                OpenConnection();
+
+                command.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                CloseConnection();
+            }
         }
     }
 }

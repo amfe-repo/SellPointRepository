@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Layers.Data.DAOEntities
 {
-    public class DAOTableEntitiesGroup : Connection, IDAO<DTOEntitiesGroup>
+    public class DAOTableEntitieType : Connection, IDAO<DTOEntitiesGroup>
     {
         public void DeleteData(int id)
         {

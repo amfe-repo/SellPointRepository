@@ -100,7 +100,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(189, 44);
+            this.pictureBox1.Location = new System.Drawing.Point(192, 25);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(189, 117);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -115,7 +115,7 @@
             this.LBSP.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.LBSP.Location = new System.Drawing.Point(248, 145);
             this.LBSP.Name = "LBSP";
-            this.LBSP.Size = new System.Drawing.Size(73, 16);
+            this.LBSP.Size = new System.Drawing.Size(72, 16);
             this.LBSP.TabIndex = 6;
             this.LBSP.Text = "SellPoint";
             // 
