@@ -42,7 +42,7 @@ namespace Layers.Data.DAOEntities
                         UrlWebEntitie = reader["UrlPaginaWeb"].ToString(),
                         UrlFacebookEntitie = reader["UrlFacebook"].ToString(),
                         UrlInstagramEntitie = reader["UrlInstagram"].ToString(),
-                        UrlTikTokEntitie = reader["FechaRegistro"].ToString(),
+                        UrlTikTokEntitie = reader["UrlTwitter"].ToString(),
                         UrlTwitterEntitie = reader["FechaRegistro"].ToString(),
                         IdEntitieGroup = reader["FechaRegistro"].ToString(),
                         IdTypeEntitie = reader["FechaRegistro"].ToString(),
