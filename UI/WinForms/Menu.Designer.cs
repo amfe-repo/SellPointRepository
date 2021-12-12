@@ -57,7 +57,7 @@ namespace UI.WinForms
             this.MenuS});
             this.MS.Location = new System.Drawing.Point(0, 0);
             this.MS.Name = "MS";
-            this.MS.Size = new System.Drawing.Size(126, 545);
+            this.MS.Size = new System.Drawing.Size(126, 598);
             this.MS.TabIndex = 0;
             this.MS.Text = "Menu";
             // 
@@ -97,6 +97,7 @@ namespace UI.WinForms
             this.Ent.Name = "Ent";
             this.Ent.Size = new System.Drawing.Size(206, 22);
             this.Ent.Text = "Entidades";
+            this.Ent.Click += new System.EventHandler(this.Ent_Click);
             // 
             // MenuS
             // 
@@ -116,21 +117,21 @@ namespace UI.WinForms
             // AcercaD
             // 
             this.AcercaD.Name = "AcercaD";
-            this.AcercaD.Size = new System.Drawing.Size(180, 22);
+            this.AcercaD.Size = new System.Drawing.Size(153, 22);
             this.AcercaD.Text = "Acerca De";
             this.AcercaD.Click += new System.EventHandler(this.AcercaD_Click);
             // 
             // Log
             // 
             this.Log.Name = "Log";
-            this.Log.Size = new System.Drawing.Size(180, 22);
+            this.Log.Size = new System.Drawing.Size(153, 22);
             this.Log.Text = "Login";
             this.Log.Click += new System.EventHandler(this.Log_Click);
             // 
             // Exit
             // 
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(180, 22);
+            this.Exit.Size = new System.Drawing.Size(153, 22);
             this.Exit.Text = "Salir";
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
@@ -142,7 +143,7 @@ namespace UI.WinForms
             this.Status.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.LBS1,
             this.toolStripStatusLabel1});
-            this.Status.Location = new System.Drawing.Point(126, 523);
+            this.Status.Location = new System.Drawing.Point(126, 576);
             this.Status.Name = "Status";
             this.Status.Size = new System.Drawing.Size(844, 22);
             this.Status.TabIndex = 1;
@@ -173,7 +174,7 @@ namespace UI.WinForms
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(970, 545);
+            this.ClientSize = new System.Drawing.Size(970, 598);
             this.Controls.Add(this.Status);
             this.Controls.Add(this.MS);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -182,6 +183,7 @@ namespace UI.WinForms
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.MS.ResumeLayout(false);
             this.MS.PerformLayout();
             this.Status.ResumeLayout(false);
