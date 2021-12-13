@@ -15,13 +15,13 @@ namespace Layers.Data
         protected static SqlConnection connection = new SqlConnection(strConn);
         protected SqlCommand command = new SqlCommand(); 
 
-        public void OpenConnection() 
+        protected void OpenConnection() 
         {
             if(connection.State == ConnectionState.Closed)
                 connection.Open();
         }
 
-        public void CloseConnection()
+        protected void CloseConnection()
         {
             if (connection.State == ConnectionState.Open)
                 connection.Close();

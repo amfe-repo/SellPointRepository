@@ -42,6 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bussiness\ValidationEntitie.cs" />
+    <Compile Include="Bussiness\ValidationEntitieGroup.cs" />
+    <Compile Include="Bussiness\ValidationEntitieType.cs" />
+    <Compile Include="Bussiness\ValidationHelpers.cs" />
     <Compile Include="Bussiness\Validations.cs" />
     <Compile Include="Data\DAOEntities\Connection.cs" />
     <Compile Include="Data\DAOEntities\DAOTableEntitiesGroup.cs" />
@@ -51,10 +55,11 @@
     <Compile Include="Data\DTOStructData\DTOEntities.cs" />
     <Compile Include="Data\DTOStructData\DTOEntitiesGroup.cs" />
     <Compile Include="Data\DTOStructData\DTOEntitieTypes.cs" />
+    <Compile Include="Presentation\PresentationValidationEntitieGroup.cs" />
+    <Compile Include="Presentation\PresentationValidationEntities.cs" />
+    <Compile Include="Presentation\PresentationValidationEntitieType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Presentation\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

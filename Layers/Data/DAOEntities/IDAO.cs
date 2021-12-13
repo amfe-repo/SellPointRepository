@@ -7,7 +7,7 @@ using Layers.Data.DTOStructData;
 
 namespace Layers.Data.DAOEntities
 {
-    interface IDAO<T>
+    public interface IDAO<T>
     {
         List<T> GetData();
         List<T> GetDataById(int id);
