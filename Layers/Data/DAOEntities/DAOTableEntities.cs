@@ -89,6 +89,7 @@ namespace Layers.Data.DAOEntities
                 command.Connection = connection;
                 command.CommandText = "INSERT INTO Entidades(Descripcion, Direccion, Localidad, TipoEntidad, TipoDocumento, NumeroDocumento, Telefonos, URLPaginaWeb, URLFacebook, URLInstagram, URLTwitter, URLTikTok, idGrupoEntidad, idTipoEntidad, LimiteCredito, UserNameEntidad, PasswordEntidad, RolUserEntidad, Comentario, Estatus, NoEliminable) " +
                     "VALUES(@desc, @direcc, @Local, @TipE, @TipoD, @NumeroD, @Tel, @URLP, @URLFace, @URLInst, @Twitt, @URLTik, @idGroup, @idTipoE, @LimiteC, @UserNE, @PassE, @RolUE, @com, @est, @elim)";
+
                 command.Parameters.AddWithValue("@desc", entitie.DescriptionEntitie);
                 command.Parameters.AddWithValue("@direcc", entitie.DirecctionEntitie);
                 command.Parameters.AddWithValue("@Local", entitie.LocalityEntitie);
@@ -130,8 +131,11 @@ namespace Layers.Data.DAOEntities
             try
             {
                 command.Connection = connection;
-                command.CommandText = "UPDATE TiposEntidades SET Descripcion = @desc, Direccion = @direcc , Comentario = @com, Estatus = @est, NoEliminable = @elim" +
-                    " WHERE idTipoEntidad = @id";
+                command.CommandText = "UPDATE TiposEntidades SET Descripcion = @desc, Direccion = @direcc, Localidad = @Local, TipoEntidad = @TipoE, TipoDocumento = @TipoD, " +
+                    "NumeroDocumento = @NumeroD, Telefonos = @Tel, URLPaginaWeb = @URLP, URLFacebook = @URLFace, URLInstagram = @URLInst, URLTwitter = @Twitt, URLTikTok = @URLTik, " +
+                    "idGrupoEntidad = @idGroup, idTipoEntidad = @idTipoE, LimiteCredito = @LimiteC, UserNameEntidad = @UserNE, PasswordEntidad = @PassE, RolUserEntidad = @RolUE, " +
+                    "Comentario = @com, Estatus = @est, NoEliminable = @elim WHERE idTipoEntidad = @id";
+
                 command.Parameters.AddWithValue("@desc", entitie.DescriptionEntitie);
                 command.Parameters.AddWithValue("@direcc", entitie.DirecctionEntitie);
                 command.Parameters.AddWithValue("@Local", entitie.LocalityEntitie);
