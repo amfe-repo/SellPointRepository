@@ -138,6 +138,7 @@ namespace UI.WinForms
             this.BTNDel3.TabIndex = 7;
             this.BTNDel3.Text = "Borrar";
             this.BTNDel3.UseVisualStyleBackColor = true;
+            this.BTNDel3.Click += new System.EventHandler(this.BTNDel3_Click);
             // 
             // BTNSearch3
             // 
@@ -550,6 +551,7 @@ namespace UI.WinForms
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(306, 391);
             this.dataGridView1.TabIndex = 39;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // tipoEntidad
             // 

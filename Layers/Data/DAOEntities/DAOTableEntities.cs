@@ -12,7 +12,26 @@ namespace Layers.Data.DAOEntities
     {
         public void DeleteData(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                command.Connection = connection;
+                command.CommandText = "DELETE FROM Entidades" +
+                    " WHERE idEntidad = @id";
+
+                command.Parameters.AddWithValue("@id", id);
+                OpenConnection();
+
+                command.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                CloseConnection();
+            }
         }
 
         public List<DTOEntities> GetData()
@@ -32,7 +51,7 @@ namespace Layers.Data.DAOEntities
                 {
                     list.Add(new DTOEntities
                     {
-                        IdEntitie = (int)reader["idTipoEntidad"],
+                        IdEntitie = (int)reader["idEntidad"],
                         DescriptionEntitie = (string)reader["Descripcion"],
                         DirecctionEntitie = (string)reader["Direccion"],
                         LocalityEntitie = (string)reader["Localidad"],
@@ -131,15 +150,15 @@ namespace Layers.Data.DAOEntities
             try
             {
                 command.Connection = connection;
-                command.CommandText = "UPDATE TiposEntidades SET Descripcion = @desc, Direccion = @direcc, Localidad = @Local, TipoEntidad = @TipoE, TipoDocumento = @TipoD, " +
+                command.CommandText = "UPDATE Entidades SET Descripcion = @desc, Direccion = @direcc, Localidad = @Local, TipoEntidad = @TipoE, TipoDocumento = @TipoD, " +
                     "NumeroDocumento = @NumeroD, Telefonos = @Tel, URLPaginaWeb = @URLP, URLFacebook = @URLFace, URLInstagram = @URLInst, URLTwitter = @Twitt, URLTikTok = @URLTik, " +
                     "idGrupoEntidad = @idGroup, idTipoEntidad = @idTipoE, LimiteCredito = @LimiteC, UserNameEntidad = @UserNE, PasswordEntidad = @PassE, RolUserEntidad = @RolUE, " +
-                    "Comentario = @com, Estatus = @est, NoEliminable = @elim WHERE idTipoEntidad = @id";
+                    "Comentario = @com, Estatus = @est, NoEliminable = @elim WHERE idEntidad = @id";
 
                 command.Parameters.AddWithValue("@desc", entitie.DescriptionEntitie);
                 command.Parameters.AddWithValue("@direcc", entitie.DirecctionEntitie);
                 command.Parameters.AddWithValue("@Local", entitie.LocalityEntitie);
-                command.Parameters.AddWithValue("@TipE", entitie.TypeEntitieEntitie);
+                command.Parameters.AddWithValue("@TipoE", entitie.TypeEntitieEntitie);
                 command.Parameters.AddWithValue("@TipoD", entitie.TypeDocumentEntitie);
                 command.Parameters.AddWithValue("@NumeroD", entitie.DocumentNumberEntitie);
                 command.Parameters.AddWithValue("@Tel", entitie.PhoneEntitie);
@@ -157,6 +176,7 @@ namespace Layers.Data.DAOEntities
                 command.Parameters.AddWithValue("@com", entitie.ComentaryEntitie);
                 command.Parameters.AddWithValue("@est", entitie.StatusEntitie);
                 command.Parameters.AddWithValue("@elim", entitie.IsDeletedEntitie);
+                command.Parameters.AddWithValue("@id", entitie.IdEntitie);
                 OpenConnection();
 
                 command.ExecuteNonQuery();

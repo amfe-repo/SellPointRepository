@@ -253,8 +253,7 @@ namespace UI.WinForms
             ent.ComentaryEntitie = TXComent.Text;
             ent.StatusEntitie = cmbStatus.SelectedItem.ToString();
             ent.IsDeletedEntitie = ChF3.Checked;
-
-
+ 
             DAOTableEntities dh = new DAOTableEntities();
             dh.InsertData(ent);
             reload();
@@ -284,9 +283,46 @@ namespace UI.WinForms
             ent.ComentaryEntitie = TXComent.Text;
             ent.StatusEntitie = cmbStatus.SelectedItem.ToString();
             ent.IsDeletedEntitie = ChF3.Checked;
+            ent.IdEntitie = id;
 
             DAOTableEntities dh = new DAOTableEntities();
             dh.UpdateData(ent);
+
+            reload();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DTOEntities ent = new DTOEntities();
+            id = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+            TXDescrp.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            TXDirecc.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            TXLoc.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            tipoEntidad.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            tipoDocumento.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+            txtNoDocument.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+            txtTel.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+            TXPageW.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
+            TXFace.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
+            TXInsta.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
+            TXTiktok.Text = dataGridView1.Rows[e.RowIndex].Cells[11].Value.ToString();
+            TXTwitter.Text = dataGridView1.Rows[e.RowIndex].Cells[12].Value.ToString();
+            tipoIdGrupo.Text = dataGridView1.Rows[e.RowIndex].Cells[13].Value.ToString();
+            tipoIdEntidad.Text = dataGridView1.Rows[e.RowIndex].Cells[14].Value.ToString();
+            TXLimit.Text = dataGridView1.Rows[e.RowIndex].Cells[15].Value.ToString();
+            TXUserE.Text = dataGridView1.Rows[e.RowIndex].Cells[16].Value.ToString();
+            TXPassE.Text = dataGridView1.Rows[e.RowIndex].Cells[17].Value.ToString();
+            cmbUserRole.Text = dataGridView1.Rows[e.RowIndex].Cells[18].Value.ToString();
+            TXComent.Text = dataGridView1.Rows[e.RowIndex].Cells[19].Value.ToString();
+            cmbStatus.Text = dataGridView1.Rows[e.RowIndex].Cells[20].Value.ToString();
+            ChF3.Checked = (bool)dataGridView1.Rows[e.RowIndex].Cells[21].Value;
+
+        }
+
+        private void BTNDel3_Click(object sender, EventArgs e)
+        {
+            DAOTableEntities dh = new DAOTableEntities();
+            dh.DeleteData(id);
             reload();
         }
     }
